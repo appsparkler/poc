@@ -1,0 +1,12 @@
+{
+  "name": "npm-cli",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "bin": {
+    "my-first-script": "./cli.js"
+  },
+  "files": [
+    "cli.js"
+  ]
+}
