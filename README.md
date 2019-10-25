@@ -22,7 +22,6 @@ This file has all the configuration for linting files in the project.
 ###  `parser`
 
 ### Difference between `plugins` and `configs`:
-CONFIGS | Configs is a single set of rules and can be found on NPM with the prefix `eslint-config-<configName>`.  When a config is extended, we simply pass the config-name to the `extends` options.  For ex. `extends: ["google"]`
-________
-PLUGINS | Plugins are a set of configurations and can be searched on NPM with the prefix `eslint-plugin-<pluginName>`.  Once a plugin is installed, we need to extend it by specifying the
-________
+CONFIGS | PLUGINS
+--------|------
+Configs is a single set of rules and can be found on NPM with the prefix `eslint-config-<configName>`.  When a config is extended, we simply pass the config-name to the `extends` options.  For ex. `extends: ["google"]` | Plugins are a set of configurations and can be searched on NPM with the prefix `eslint-plugin-<pluginName>`.  Once a plugin is installed, we need to extend it by specifying the
