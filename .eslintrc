@@ -1,3 +1,10 @@
 {
-   "extends": ["eslint:recommended"]
+  "parser": "babel-eslint",
+   "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "rules": {
+     "for-direction": 0
+   }
 }
