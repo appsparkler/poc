@@ -1,3 +1,13 @@
-var x = "hello world";
+decideToCook();
+buyGroceries();
+cook();
 
-console.log(x);
+function decideToCook() {
+  //
+}
+function buyGroceries() {
+  //
+}
+function cook() {
+  //
+}
