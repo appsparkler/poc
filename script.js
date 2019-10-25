@@ -1,3 +1,5 @@
+var x = "hello world";
+
 decideToCook();
 buyGroceries();
 cook();
