@@ -1,6 +1,6 @@
 var x = "hello world";
 
-decideToCook();
+decideToCook(x);
 buyGroceries();
 cook();
 
