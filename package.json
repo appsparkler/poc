@@ -1,0 +1,7 @@
+{
+  "name": "eslint",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Aakash Shah <aakash.shah@publicissapient.com>",
+  "license": "MIT"
+}
