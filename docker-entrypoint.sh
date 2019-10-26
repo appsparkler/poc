@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 set -e;
 cp /tmp/.bashrc ~/;
-cp /tmp/.ssh ~/.ssh -r;
+cp /tmp/.ssh ~/ -rf;
 exec bash;
