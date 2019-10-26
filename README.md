@@ -4,5 +4,5 @@
   - [Basic Setup](/tree/poc/eslint-basic)
 
 ## Docker Images
-  - [Debian Base Box](/tree/poc/debian-base-box)
-  - [Debian Box](/tree/poc/debian-box)
+  - [Debian Base Box](../poc/debian-base-box)
+  - [Debian Box](../poc/debian-box)
