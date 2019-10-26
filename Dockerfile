@@ -1,4 +1,4 @@
-FROM debian-box-base:latest
+FROM node:13.0.1
 
 COPY ./.bashrc /tmp/.bashrc
 COPY ./docker-entrypoint.sh /bin/docker-entrypoint.sh
