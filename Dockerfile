@@ -1,4 +1,4 @@
-FROM debian-box-base:latest
+FROM appsparkler/debian-box-base:latest
 
 COPY ./.bashrc /tmp/.bashrc
 COPY ./docker-entrypoint.sh /bin/docker-entrypoint.sh
