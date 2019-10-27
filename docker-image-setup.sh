@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -e;
-# chmod +x /bin/docker-entrypoint.sh;
+chmod +x /bin/docker-entrypoint.sh;
 
 # APT tasks
 apt-get update;
