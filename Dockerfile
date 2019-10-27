@@ -4,7 +4,8 @@ COPY .bashrc /root/.bashrc
 
 # docker-image setup
 COPY docker-image-setup.sh /tmp/docker-image-setup.sh
-RUN "/tmp/docker-image-setup.sh"
+COPY docker-entrypoint.sh /bin/docker-image-setup.sh
+RUN "/bin/docker-image-setup.sh"
 
 # docker-entrypoint
 COPY docker-entrypoint.sh /bin/docker-entrypoint.sh
