@@ -1,4 +1,4 @@
 module.exports = {
-  path: require(`../../config/paths`).distDir,
+  path: require(`../../../config/paths`).distDir,
   filename: '[name].js'
 }
