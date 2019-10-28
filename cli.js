@@ -1,3 +1,6 @@
 #!/usr/bin/env node
-console.log(process.argv);
-console.log('Nice!!!')
+
+const [,,task] = process.argv;
+if(task === 'build') {
+  
+}
