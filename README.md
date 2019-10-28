@@ -1,10 +1,9 @@
-# :whale:Debian Box pre-installed with `Node` and `Nano`
+# :whale:Debian Box
 
 ## Getting started:
-- MOUNT your `.ssh` folder with `-v <local-path-to-ssh>:/tmp/.ssh`
-  - For ex. : `${HOME}/.ssh:/tmp/.ssh`
-- MOUNT your `.gitconfig` file with `-v <local-path-to-.gitconfig>:/root/.gitconfig`
-  - For ex. : `${HOME}/.gitconfig:/.gitconfig`
-- MOUNT any other folder you need.
-
-The `.ssh` folder will be copied from `/tmp/.ssh` to `/root/.ssh` by the `docker-entrypoint.sh`.
+- This is a Debian Base Box which has the following software installed
+  - `APT-GET` updated and upgraded
+  - `NodeJS` (check the `Dockerfile` for the version)
+  - [`Nano terminal editor`](https://www.nano-editor.org/)
+- This image can be set a base-image for other images.
+- Any additional software can be added in the `./docker-image-setup.sh` file on this branch.
