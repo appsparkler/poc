@@ -4,6 +4,9 @@
   "main": "index.js",
   "author": "Aakash Shah <aakash.shah@publicissapient.com>",
   "license": "MIT",
+  "scripts": {
+    "webpack": "webpack"
+  },
   "devDependencies": {
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.9",
