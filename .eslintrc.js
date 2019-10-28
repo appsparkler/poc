@@ -6,6 +6,9 @@ module.exports = {
     browser: true
   },
   extends: [
-    "eslint:recommended"
-  ]
+    'eslint:recommended'
+  ],
+  rules: {
+    semi: [2, 'never']
+  }
 };
