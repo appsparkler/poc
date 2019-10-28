@@ -1,4 +1,4 @@
 module.exports = {
-  path: 'dist',
+  path: require(`${process.env.INIT_CWD}/config/paths`).distDir,
   filename: '[name].js'
 }
