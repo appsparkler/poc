@@ -9,4 +9,4 @@
 ## Webpack
   - [Basic Webpack Project](https://github.com/appsparkler/poc/tree/webpack/basic-project)
   - [Webpack Project with `app-scripts-cli`](https://github.com/appsparkler/poc/tree/webpack/with-app-scripts)
-  - [Webpack `app-scripts-cli`](https://github.com/appsparkler/poc/tree/webpack/app-scripts-cli)
+  - [Webpack `app-scripts-cli`](/tree/webpack/app-scripts-cli)
