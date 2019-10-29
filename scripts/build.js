@@ -4,7 +4,7 @@ const compiler = webpack(webpackConfig)
 compiler.run(compilerCB)
 
 function compilerCB() {
-  console.log(arguments) // eslint-disable-line
+  // console.log(arguments) // eslint-disable-line
 }
 
 console.log(webpackConfig) // eslint-disable-line
