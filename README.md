@@ -10,3 +10,5 @@
   - [Basic Webpack Project](../../tree/webpack/basic-project)
   - [Webpack Project with `app-scripts-cli`](../../tree/webpack/with-app-scripts)
   - [Webpack `app-scripts-cli`](../../tree/webpack/app-scripts-cli)
+  - [`Code-Splitting`](../../tree/webpack/code-splitting)
+    - [Reference Link](https://webpack.js.org/guides/code-splitting)
