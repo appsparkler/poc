@@ -1,5 +1,1 @@
-# :whale:Webpack Basic Setup
-
-## :fire:Highlights
-- [Yarn offline-packages](https://yarnpkg.com/blog/2016/11/24/offline-mirror/) best-practices implemented...
-- 
+# :whale:Following the code-splitting example @ [Code Splitting](https://webpack.js.org/guides/code-splitting)
