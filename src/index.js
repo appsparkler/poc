@@ -9,7 +9,6 @@ export function numToWord(num) {
 
 export function wordToNum(word) {
   return _.reduce(numRef, (accum, ref) => {
-    console.log(ref.word === word && word.toLowerCase())
     return ref.word === word && word.toLowerCase() ? ref.num : accum
   }, -1)
 }
