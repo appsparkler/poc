@@ -1,7 +1,9 @@
 module.exports = {
+  parser: 'babel-eslint',
   parserOptions: {
-    ecmaVersion: 6,
-    sourceType: 'module'
+    ecmaVersion: 7,
+    sourceType: 'module',
+    allowImportExportEverywhere: true
   },
   env: {
     browser: true
@@ -10,6 +12,7 @@ module.exports = {
     'eslint:recommended'
   ],
   rules: {
-    semi: [2, 'never']
+    semi: [2, 'never'],
+    indent: ["error", 2]
   }
 };
