@@ -1,3 +1,3 @@
-module.exports = {
-  app: require(`${process.env.INIT_CWD}/config/paths`).indexJS
-}
+console.log(`${process.env.INIT_CWD}/src/index.js`)
+
+module.exports = `${process.env.INIT_CWD}/src/index.js`

@@ -1,21 +1,15 @@
 import _ from 'lodash'
+import numRef from './ref.json'
 
-function component() {
-  const elem = document.createElement('div')
-  elem.innerHTML = _.join(['Hello', 'Webpack'], ' ')
-  elem.onclick = print
-  return elem
+export function numToWord(num) {
+  return _.reduce(numRef, (accum, ref) => {
+    return ref.num === num ? ref.word : accum
+  }, '')
 }
 
-document.body.appendChild(component())
-
-// function print({default: Print}) {
-//   Print('Hello Webpack!')
-// }
-
-function print() {
-  import('./print')
-    .then(({default: Print}) =>{
-      Print('Hello Webpack!')
-    })
+export function wordToNum(word) {
+  return _.reduce(numRef, (accum, ref) => {
+    console.log(ref.word === word && word.toLowerCase())
+    return ref.word === word && word.toLowerCase() ? ref.num : accum
+  }, -1)
 }
