@@ -1,1 +1,1 @@
-# :whale: Following the tutorial for [Module Identifiers](https://webpack.js.org/guides/caching/#module-identifiers)
+# :whale: Following the tutorial for [Authoring Libraries](https://webpack.js.org/guides/author-libraries/#authoring-a-library)
