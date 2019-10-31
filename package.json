@@ -4,6 +4,9 @@
   "private": true,
   "author": "Aakash Shah <aakash.shah@publicissapient.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "webpack"
+  },
   "devDependencies": {
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.9"
