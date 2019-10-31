@@ -1,3 +1,5 @@
+import _ from 'lodash'
+
 export default function printMe() {
-  alert('I get called from print.js!')
+  alert(_.join(['I get called ', 'from print.js!'], ' '))
 }
