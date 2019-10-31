@@ -1,10 +1,11 @@
-// import _ from 'lodash'
 import printMe from './print'
 
-import(/* webpackChunkName: "lodash" */ 'lodash')
+renderLoadingIndicator()
+import(/* webpackChunkName: "lodash", webpackPreload: true */ 'lodash')
   .then(renderElement)
 
 function renderElement({default: _}) {
+  document.getElementById('loading-indicator').style.display = 'none'
   const element = document.createElement('div')
   const btn = document.createElement('button')
   // setup the div
@@ -17,4 +18,10 @@ function renderElement({default: _}) {
   //
   element.appendChild(btn)
   document.body.appendChild(element)
+}
+
+function renderLoadingIndicator() {
+  const div = document.createElement('div')
+  div.innerHTML = '<h1 id="loading-indicator">Loading...</h1>'
+  document.body.appendChild(div)
 }

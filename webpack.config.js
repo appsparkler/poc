@@ -6,15 +6,16 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 module.exports = {
   // setup for development environment
   mode: 'development',
-  devtool: 'inline-source-map',
+  // devtool: 'inline-source-map',
   devServer: {
     contentBase: resolve('dist'),
     open: true,
     writeToDisk:true
   },
-  // 
+  //
   entry: {
-    app: resolve('src/index.js')
+    app: resolve('src/index.js'),
+    print: resolve('src/print.js')
   },
   output: {
     filename: '[name].bundle.js',

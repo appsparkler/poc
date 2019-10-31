@@ -1,5 +1,5 @@
 export default function printMe() {
-  import(/* webpackChunkName: "lodash" */ 'lodash')
+  import(/* webpackChunkName: "lodash", webpackPreload: true */ 'lodash')
     .then(printInAlertBox)
 }
 
