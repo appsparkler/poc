@@ -3,7 +3,10 @@ const HTMLWebpackPlugin = require('html-webpack-plugin')
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 
 module.exports = {
+  // tools for development environment
   mode: 'development',
+  devtool: 'inline-source-map',
+  //
   entry: {
     app: path.resolve('src/index.js'),
     print: path.resolve('src/print.js')
