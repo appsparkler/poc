@@ -6,6 +6,9 @@ module.exports = {
   // tools for development environment
   mode: 'development',
   devtool: 'inline-source-map',
+  devServer: {
+    contentBase: './dist'
+  },
   //
   entry: {
     app: path.resolve('src/index.js'),
