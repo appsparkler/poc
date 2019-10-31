@@ -6,7 +6,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 module.exports = {
   // setup for development environment
   mode: 'development',
-  devtool: 'inline-sorce-map',
+  devtool: 'inline-source-map',
   devServer: {
     contentBase: resolve('dist'),
     open: true,
