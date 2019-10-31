@@ -1,10 +1,13 @@
 {
   "name": "pocpin",
   "version": "1.0.0",
-  "main": "index.js",
+  "private": true,
   "author": "Aakash Shah <aakash.shah@publicissapient.com>",
   "license": "MIT",
-  "devDependencies": {},
+  "devDependencies": {
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9"
+  },
   "dependencies": {
     "lodash": "^4.17.15"
   }
