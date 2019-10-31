@@ -9,10 +9,11 @@ function component() {
   element.classList.add('hello')
   element.innerHTML = _.join(['Hello', 'webpack'], ' ')
 
-  //
+  // setup the button
   btn.innerHTML = `Click me you'll see an alert`
   btn.onclick = printMe
 
+  element.appendChild(btn)
   return element
 }
 
