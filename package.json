@@ -1,0 +1,11 @@
+{
+  "name": "pocpin",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Aakash Shah <aakash.shah@publicissapient.com>",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {
+    "lodash": "^4.17.15"
+  }
+}
