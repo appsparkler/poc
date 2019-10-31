@@ -1,7 +1,7 @@
 module.exports = {
   parser: 'babel-eslint',
   parserOptions: {
-    ecmaVersion: 2019,
+    ecmaVersion: 2020,
     sourceType: 'module'
   },
   env: {
@@ -13,6 +13,6 @@ module.exports = {
   ],
   rules: {
     indent: ['error', 2],
-    semi: [2, "never"]
+    semi: [2, "never"] 
   }
 }

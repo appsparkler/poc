@@ -1,3 +1,8 @@
 export default function printMe() {
-  alert('I get called from print.js!!!')
+  import(/* webpackChunkName: "lodash" */ 'lodash')
+    .then(printInAlertBox)
+}
+
+function printInAlertBox({default: _}) {
+  alert(_.join(['I get called', 'from print.js!!!!!!'], ' '))
 }
