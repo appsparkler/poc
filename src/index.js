@@ -1,23 +1,33 @@
-import printMe from './print'
 
+const btn = document.createElement('button')
 renderLoadingIndicator()
-import(/* webpackChunkName: "lodash", webpackPreload: true */ 'lodash')
-  .then(renderElement)
+renderElement(btn)
+import('./print' /* webpackPrefetch: true */)
+  .then(setEventHandlerOnButton.bind(null, btn))
 
-function renderElement({default: _}) {
+function renderElement(btn) {
+  // alert('rendering element now...')
   document.getElementById('loading-indicator').style.display = 'none'
   const element = document.createElement('div')
-  const btn = document.createElement('button')
   // setup the div
   element.classList.add('hello')
-  element.innerHTML =
-  _.join(['Hello', 'webpack'], ' ')
+  element.innerHTML = `
+  <h1>Hello Webpack</h1>
+  <code id="button-loading-indicator">Please wait, code for button is loading....</code>
+  <br>
+  `
+
   // setup the button
-  btn.innerHTML = `Click me you'll see an alert...`
-  btn.onclick = printMe
+  btn.innerHTML = `User is expected to click this button at a later time...`
   //
   element.appendChild(btn)
   document.body.appendChild(element)
+}
+
+
+function setEventHandlerOnButton(btn, {default: printMe}) {
+  document.getElementById('button-loading-indicator').style.display = 'none'
+  btn.onclick = printMe
 }
 
 function renderLoadingIndicator() {

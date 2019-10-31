@@ -1,8 +1,5 @@
-export default function printMe() {
-  import(/* webpackChunkName: "lodash", webpackPreload: true */ 'lodash')
-    .then(printInAlertBox)
-}
+import _ from 'lodash'
 
-function printInAlertBox({default: _}) {
+export default function printInAlertBox() {
   alert(_.join(['I get called', 'from print.js!!!!!!'], ' '))
 }
