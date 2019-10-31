@@ -12,6 +12,7 @@ module.exports = {
     "eslint:recommended"
   ],
   rules: {
-    indent: ['error', 2]
+    indent: ['error', 2],
+    semi: [2, "never"]
   }
 }
