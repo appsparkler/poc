@@ -18,14 +18,14 @@ module.exports = {
     print: resolve('src/print.js')
   },
   output: {
-    filename: '[name].bundle.js',
+    filename: '[name].[contenthash].bundle.js',
     path: resolve(__dirname, 'dist'),
-    chunkFilename: '[name].bundle.js'
+    chunkFilename: '[name].[contenthash].bundle.js'
   },
   plugins: [
     new CleanWebpackPlugin(),
     new HTMLWebpackPlugin({
-      title: 'Output Management'
+      title: 'Caching'
     })
   ]
 }
