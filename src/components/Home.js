@@ -27,7 +27,7 @@ class Home extends Component {
     const map_postsList = post => (
       <div className="post card" key={post.id}>
         <div className='card-content'>
-          <Link to={{pathname:`/post/${post.id}`, state: post}}  >
+          <Link to={{pathname:`/${post.id}`, state: post}}  >
             <h1 className='card-title red-text'>{post.title}</h1>
           </Link>
           <p>
