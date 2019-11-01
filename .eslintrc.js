@@ -13,6 +13,6 @@ module.exports = {
   ],
   rules: {
     indent: ['error', 2],
-    semi: [2, "never"] 
+    semi: [2, "never"]
   }
 }

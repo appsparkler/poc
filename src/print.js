@@ -1,7 +1,7 @@
 
-export default function printInAlertBox() {
-  import('lodash')
-    .then(showAlertBox)
+export default async function printInAlertBox() {
+  const lodash = await import('lodash')
+  showAlertBox(lodash)
 }
 
 function showAlertBox({ default: _ }) {
