@@ -27,5 +27,8 @@ module.exports = {
     new HTMLWebpackPlugin({
       title: 'Caching'
     })
-  ]
+  ],
+  optimization: {
+    runtimeChunk: 'single'
+  }
 }
