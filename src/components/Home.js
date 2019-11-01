@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 class Home extends Component {
@@ -11,22 +12,24 @@ class Home extends Component {
       .get('https://jsonplaceholder.typicode.com/posts')
       .then(res => {
         // alert(JSON.stringify())
-        const randomNumber = Math.floor(Math.random() * 80);
+        const randomNumber = Math.floor(Math.random() * 80)
         // alert(res.data.length);
         this.setState({
           posts: res.data.splice(randomNumber, 10)
         })
-      });
+      })
   }
   render() {
-    const { posts } = this.state;
+    const { posts } = this.state
     const noPostsJSX = (
       <div>No Posts Yet...</div>
     )
     const map_postsList = post => (
       <div className="post card" key={post.id}>
         <div className='card-content'>
-          <h1 className='card-title red-text'>{post.title}</h1>
+          <Link to={'/post/' + post.id} post={post}>
+            <h1 className='card-title red-text'>{post.title}</h1>
+          </Link>
           <p>
             { post.body.substr(0, 80) }...
           </p>
@@ -44,4 +47,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default Home
