@@ -12,12 +12,12 @@ function renderElement(btn) {
   // setup the div
   element.classList.add('hello')
   element.innerHTML = `
-  <h1>Hello Webpack</h1>
-  <code id="button-loading-indicator">Please wait, code for button is loading....</code>
-  <br>
+    <h1>Hello Webpack</h1>
+    <br>
   `
 
   // setup the button
+  btn.disabled = true
   btn.innerHTML = `User is expected to click this button at a later time...`
   //
   element.appendChild(btn)
@@ -26,8 +26,8 @@ function renderElement(btn) {
 
 
 function setEventHandlerOnButton(btn, {default: printMe}) {
-  document.getElementById('button-loading-indicator').style.display = 'none'
   btn.onclick = printMe
+  btn.disabled = false
 }
 
 function renderLoadingIndicator() {
