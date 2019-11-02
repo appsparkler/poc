@@ -1,0 +1,9 @@
+.home .post {
+  overflow:hidden;
+}
+.home .post img {
+  position: absolute;
+  opacity: .5;
+  left: -100px;
+  top: 20px;
+}

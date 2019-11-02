@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import Pokeball from '../pokeball.png'
 
 class Home extends Component {
   state = {
@@ -31,6 +32,7 @@ function getComponentJSX() {
   )
   const map_postsList = post => (
     <div className="post card" key={post.id}>
+      <img src={Pokeball} alt="Pokeball" />
       <div className='card-content'>
         <Link to={{pathname:`/${post.id}`, state: post}}  >
           <h1 className='card-title red-text'>{post.title}</h1>
@@ -44,7 +46,7 @@ function getComponentJSX() {
   const postsList = posts && posts.length ?
     posts.map(map_postsList) : noPostsJSX
   return (
-    <div className="container">
+    <div className="container home">
       <h4 className="center red-text">Home</h4>
       { postsList }
     </div>
