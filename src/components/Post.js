@@ -1,23 +1,23 @@
 import React, { Component } from 'react'
-import axios from 'axios'
+import { connect } from 'react-redux'
 
-export default class Post extends Component {
-  state = {
-    postId: undefined,
-    post: {}
-  }
-
-  componentDidMount() {
-    setPostDataOnState.call(this)
-  }
-
+class Post extends Component {
   render() {
     return getComponentJSX.call(this)
   }
 }
 
+export default connect(mapStateToProps)(Post)
+
+function mapStateToProps(state, ownProps) {
+  const { post_id } = ownProps.match.params
+  return {
+    post: state.posts.find(post => post.id === post_id )
+  }
+}
+
 function getComponentJSX() {
-  const { post } = this.state
+  const { post } = this.props
   return(
     <div className="container">
       <h4>{ post.title }</h4>
@@ -26,12 +26,4 @@ function getComponentJSX() {
       </p>
     </div>
   )
-}
-
-async function setPostDataOnState() {
-  const id = this.props.match.params.post_id
-  const post = await axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`)
-  this.setState({
-    post: post.data
-  })
 }
