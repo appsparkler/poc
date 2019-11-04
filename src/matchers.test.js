@@ -16,3 +16,13 @@ test('adding positive number is not zero', () => {
     }
   }
 })
+
+// TRUTHINESS
+test('null', ()=> {
+  const n = null
+  expect(n).toBeNull()
+  expect(n).toBeDefined()
+  expect(n).not.toBe(0)
+  expect(n).not.toBeTruthy()
+  expect(n).toBeFalsy()
+})
