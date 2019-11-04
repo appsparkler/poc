@@ -1,9 +1,10 @@
 function registrationFunction(server, options) {
-  server.route({
+  const routeConfig = {
     method: 'GET',
     path: '/',
-    handler: () => options.message,
-  })
+    handler: () => options.message || 'Hello World',
+  }
+  server.route(routeConfig)
 }
 
 exports.plugin = {
