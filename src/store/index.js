@@ -12,5 +12,16 @@ function storeReducer(state, action) {
     ]
   }
 
-  return state
+  if (action.type === 'DELETE_POST') return deletePost.call(null, state, action.post_id)
+  return {
+    ...state
+  }
+}
+
+function deletePost(state, post_id) {
+  const newState = {
+    ...state,
+    posts: state.posts.filter(post => post_id !== post.id)
+  }
+  return newState
 }
