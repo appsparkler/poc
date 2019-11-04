@@ -1,32 +1,19 @@
 module.exports = {
+  parser: 'babel-eslint',
+  parserOptions: {
+    ecmaVersion: 2020
+  },
   env: {
-    browser: true,
-    commonjs: true,
-    es6: true,
+    node: true,
     "jest/globals": true
   },
   extends: [
-    'airbnb',
+    'google'
   ],
-  globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly'
-  },
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-    ecmaVersion: 2018
-  },
   plugins: [
-    'react',
-    'jest'
+    "jest"
   ],
   rules: {
-    "jest/no-disabled-tests": "warn",
-    "jest/no-focused-tests": "error",
-    "jest/no-identical-title": "error",
-    "jest/prefer-to-have-length": "warn",
-    "jest/valid-expect": "error"
+    semi: [2, 'never']
   }
-};
+}
