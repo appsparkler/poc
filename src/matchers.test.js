@@ -38,3 +38,11 @@ test('two plus two', () => {
   expect(value).toBe(4)
   expect(value).toEqual(4)
 })
+
+// STRINGS
+test('There is no I in team', () => {
+  expect('team').not.toMatch(/I/)
+})
+test('but there is a "stop" in Christoph', () => {
+  expect('Christoph').toMatch(/stop/)
+})
