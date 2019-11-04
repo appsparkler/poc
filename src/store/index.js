@@ -12,8 +12,11 @@ function storeReducer(state, action) {
     ]
   }
 
+  // DELETE _POST
   if (action.type === 'DELETE_POST') return deletePost.call(null, state, action.post_id)
-  return {
+
+
+  else return {
     ...state
   }
 }
