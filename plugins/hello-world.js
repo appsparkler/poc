@@ -2,7 +2,10 @@ function registrationFunction(server, options) {
   const routeConfig = {
     method: 'GET',
     path: '/',
-    handler: () => options.message || 'Hello World',
+    handler: () => {
+      const { msg } = options
+      return msg || 'Hello World'
+    },
   }
   server.route(routeConfig)
 }
