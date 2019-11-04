@@ -1,6 +1,7 @@
 .home .post {
-  overflow:hidden;
+  overflow: hidden;
 }
+
 .home .post img {
   position: absolute;
   opacity: .5;

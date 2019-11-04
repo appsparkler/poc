@@ -1,32 +1,26 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import axios from 'axios'
+import { connect } from 'react-redux'
 import Pokeball from '../pokeball.png'
 
 class Home extends Component {
-  state = {
-    posts: []
-  }
-  async componentDidMount() {
-    await setPostDataOnState.call(this)
-  }
   render() {
     return getComponentJSX.call(this)
   }
 }
 
-export default Home
+export default connect(mapStateToProps)(Home)
 
-async function setPostDataOnState() {
-  const posts = await axios.get('https://jsonplaceholder.typicode.com/posts')
-  const randomNumber = Math.floor(Math.random() * 80)
-  this.setState({
-    posts: posts.data.splice(randomNumber, 10)
-  })
+// abstractions
+function mapStateToProps(state, ownProps) {
+  return {
+    ...state,
+    posts: state.posts
+  }
 }
 
 function getComponentJSX() {
-  const { posts } = this.state
+  const { posts } = this.props
   const noPostsJSX = (
     <div>No Posts Yet...</div>
   )
