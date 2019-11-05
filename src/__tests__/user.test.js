@@ -18,3 +18,9 @@ it('works with async/await', async () => {
   const data = await user.getUserName(4)
   expect(data).toEqual('Mark')
 })
+
+// WITH async/await + .resolves
+it('works with async/await and resolves too', async ()=> {
+  expect.assertions(1)
+  await expect(user.getUserName(5)).resolves.toEqual('Paul')
+})
