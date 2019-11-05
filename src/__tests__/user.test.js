@@ -24,3 +24,12 @@ it('works with async/await and resolves too', async ()=> {
   expect.assertions(1)
   await expect(user.getUserName(5)).resolves.toEqual('Paul')
 })
+
+// ERROR HANDLING
+it('tests errors with promises', ()=> {
+  expect.assertions(1)
+  return user.getUserName(2)
+      .catch((e)=> {
+        expect(e).toEqual(new Error('User with 2 not found.'))
+      })
+})

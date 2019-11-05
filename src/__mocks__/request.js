@@ -4,14 +4,12 @@ const users = {
 }
 
 export default function(url) {
-  return new Promise(function(resolve) {
+  return new Promise(function(resolve, reject) {
     const userID = parseInt(url.substr('/users/'.length), 10)
     process.nextTick(() => {
       users[userID] ?
         resolve(users[userID]) :
-        reject({
-          error: `User with ${userID} not found.`,
-        })
+        reject(new Error(`User with ${userID} not found.`))
     })
   })
 }
