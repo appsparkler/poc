@@ -1,4 +1,4 @@
-test('it will fail everytime!', () => {
+test('will check matchers and pass', () => {
   const user = {
     createdAt: new Date(),
     id: Math.floor(Math.random() * 20),
