@@ -8,7 +8,8 @@ module.exports = {
     "jest/globals": true
   },
   extends: [
-    'google'
+    'google',
+    'plugin:react/recommended'
   ],
   plugins: [
     "jest"
