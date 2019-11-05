@@ -15,6 +15,7 @@ it('works with resolves', () => {
 
 // WITH ASYNC/AWAIT
 it('works with async/await', async () => {
+  expect.assertions(1)
   const data = await user.getUserName(4)
   expect(data).toEqual('Mark')
 })
@@ -42,4 +43,11 @@ it('tests errors with async/await', async () => {
   } catch (e) {
     expect(e).toEqual(new Error('User with 1 not found.'))
   }
+})
+
+// ERROR HANDLING with .rejects
+it('tests errors with .rejects', ()=> {
+  expect.assertions(1)
+  return expect(user.getUserName(2))
+      .rejects.toEqual(new Error('User with 2 not found.'))
 })
