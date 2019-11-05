@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer'
 
 it('renders correctly', ()=> {
   const tree = renderer
-      .create(<Link page="https://www.facebook.com">Facebook</Link>)
+      .create(<Link page="https://www.instagram.com">Instagram</Link>)
       .toJSON()
   expect(tree).toMatchSnapshot()
 })
