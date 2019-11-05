@@ -10,3 +10,8 @@ it('works with resolves', () => {
   expect.assertions(1)
   return expect(user.getUserName(5)).resolves.toEqual('Paul')
 })
+//
+it('works with async/await', async () => {
+  const data = await user.getUserName(4)
+  expect(data).toEqual('Mark')
+})
