@@ -1,13 +1,14 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 const STATUS = {
   HOVERED: 'hovered',
   NORMAL: 'normal',
 }
-
 /**
   * This is the Link Component
 */
-export default class Link extends React.Component {
+class Link extends React.Component {
   /**
     The Constructor for the Link Component
   */
@@ -49,3 +50,10 @@ export default class Link extends React.Component {
     )
   }
 }
+
+Link.propTypes = {
+  page: PropTypes.string,
+  children: PropTypes.string,
+}
+
+export default Link
