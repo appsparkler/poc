@@ -1,16 +1,19 @@
 jest.mock('../request')
 import * as user from '../user'
 
+// WITH PROMISES
 it('works with promises', () => {
   expect.assertions(1)
   return user.getUserName(4).then((data) => expect(data).toEqual('Mark'))
 })
 
+// WITH RESOLVES
 it('works with resolves', () => {
   expect.assertions(1)
   return expect(user.getUserName(5)).resolves.toEqual('Paul')
 })
-//
+
+// WITH ASYNC/AWAIT
 it('works with async/await', async () => {
   const data = await user.getUserName(4)
   expect(data).toEqual('Mark')
