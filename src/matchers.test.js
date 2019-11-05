@@ -46,3 +46,15 @@ test('There is no I in team', () => {
 test('but there is a "stop" in Christoph', () => {
   expect('Christoph').toMatch(/stop/)
 })
+
+// ARRAYS and ITERABLES
+test('the shopping list has cheeze on it', () => {
+  const shoppingList = [
+    'diapers',
+    'kleenex',
+    'trash bags',
+    'paper towels',
+    'cheeze',
+  ]
+  expect(shoppingList).toContain('cheeze')
+})
