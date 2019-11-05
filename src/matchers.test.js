@@ -58,3 +58,16 @@ test('the shopping list has cheeze on it', () => {
   ]
   expect(shoppingList).toContain('cheeze')
 })
+
+// EXCEPTIONS
+/**
+ * Compiles android code.
+*/
+function compileAndroidCode() {
+  throw new Error('you are working with the wrong JDK')
+}
+test('compile-android function throws an error', () => {
+  expect(compileAndroidCode).toThrow(/JDK/)
+  expect(compileAndroidCode).toThrow(Error)
+  expect(compileAndroidCode).toThrow('you are working with the wrong JDK')
+})
