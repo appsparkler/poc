@@ -51,3 +51,10 @@ it('tests errors with .rejects', ()=> {
   return expect(user.getUserName(2))
       .rejects.toEqual(new Error('User with 2 not found.'))
 })
+
+// ERROR HANDLING with async/await and .rejects
+it('tests errors with asyn/await and .rejects', async () => {
+  expect.assertions(1)
+  await expect(user.getUserName(1))
+      .rejects.toEqual(new Error('User with 1 not found.'))
+})
