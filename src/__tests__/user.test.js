@@ -33,3 +33,13 @@ it('tests errors with promises', ()=> {
         expect(e).toEqual(new Error('User with 2 not found.'))
       })
 })
+
+// ERROR HANDLING with async/AWAIT
+it('tests errors with async/await', async () => {
+  expect.assertions(1)
+  try {
+    await user.getUserName(1)
+  } catch (e) {
+    expect(e).toEqual(new Error('User with 1 not found.'))
+  }
+})
