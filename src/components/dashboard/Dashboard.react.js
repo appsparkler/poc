@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import Notifications from './Notifications.react'
 
 class Dashboard extends Component {
   render() {
@@ -17,7 +18,7 @@ function getComponentJSX() {
           Project List
         </div>
         <div className="col s12 m5 offset-m1">
-          Notifications
+          <Notifications />
         </div>
       </div>
     </div>
