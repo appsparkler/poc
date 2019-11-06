@@ -52,7 +52,7 @@ exports[`should render the expected HTML 1`] = `
         >
           <li>
             <a
-              href="/"
+              href="/signin"
               onClick={[Function]}
             >
               Sign Up
@@ -60,7 +60,7 @@ exports[`should render the expected HTML 1`] = `
           </li>
           <li>
             <a
-              href="/"
+              href="/signup"
               onClick={[Function]}
             >
               Login
