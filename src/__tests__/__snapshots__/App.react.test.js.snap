@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the expected HTML 1`] = `
+<div
+  className="App"
+>
+  <nav>
+    <div
+      className="nav-wrapper grey darken-3"
+    >
+      <div
+        className="container"
+      >
+        <a
+          className="brand-logo"
+          href="/"
+          onClick={[Function]}
+        >
+          MarioPlan
+        </a>
+        <ul
+          className="right"
+        >
+          <li>
+            <a
+              href="/"
+              onClick={[Function]}
+            >
+              Create Project
+            </a>
+          </li>
+          <li>
+            <a
+              href="/"
+              onClick={[Function]}
+            >
+              Logout
+            </a>
+          </li>
+          <li>
+            <a
+              className="btn btn-floating pink lighten-3"
+              href="/"
+              onClick={[Function]}
+            >
+              NN
+            </a>
+          </li>
+        </ul>
+        <ul
+          class="right"
+        >
+          <li>
+            <a
+              href="/"
+              onClick={[Function]}
+            >
+              Sign Up
+            </a>
+          </li>
+          <li>
+            <a
+              href="/"
+              onClick={[Function]}
+            >
+              Login
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div
+    className="dashboard container"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col s12 m6"
+      >
+        Project List
+      </div>
+      <div
+        className="col s12 m5 offset-m1"
+      >
+        <div>
+          <p>
+            Notifications
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

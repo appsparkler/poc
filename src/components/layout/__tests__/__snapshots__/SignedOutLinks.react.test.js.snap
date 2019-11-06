@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly 1`] = `
+<ul
+  class="right"
+>
+  <li>
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      Sign Up
+    </a>
+  </li>
+  <li>
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      Login
+    </a>
+  </li>
+</ul>
+`;
