@@ -9,9 +9,21 @@ it('should render the expected HTML', () => {
     <div
       className="App"
     >
-      <h1>
-        MarioPlan
-      </h1>
+      <div
+        className="navbar-wrapper gray darken-3"
+      >
+        <div
+          className="container"
+        >
+          <a
+            className="brand-logo"
+            href="/"
+            onClick={[Function]}
+          >
+            MarioPlan
+          </a>
+        </div>
+      </div>
     </div>
   `)
 })
