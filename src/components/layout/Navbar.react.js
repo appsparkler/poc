@@ -5,15 +5,17 @@ import SignedOutLinks from './SignedOutLinks.react'
 
 const Navbar = () => {
   return (
-    <div className="navbar-wrapper gray darken-3">
-      <div className="container">
-        <Link to="/" className="brand-logo">
+    <nav>
+      <div className="nav-wrapper grey darken-3">
+        <div className="container">
+          <Link to="/" className="brand-logo">
             MarioPlan
-        </Link>
-        <SignedInLinks />
-        <SignedOutLinks />
+          </Link>
+          <SignedInLinks />
+          <SignedOutLinks />
+        </div>
       </div>
-    </div>
+    </nav>
   )
 }
 

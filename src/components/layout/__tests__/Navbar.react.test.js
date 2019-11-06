@@ -12,59 +12,71 @@ it("should render the navbar correctly", () => {
   const tree = component.toJSON();
   expect.assertions(1);
   expect(tree).toMatchInlineSnapshot(`
-    <div
-      className="navbar-wrapper gray darken-3"
-    >
+    <nav>
       <div
-        className="container"
+        className="nav-wrapper grey darken-3"
       >
-        <a
-          className="brand-logo"
-          href="/"
-          onClick={[Function]}
-        >
-          MarioPlan
-        </a>
-        <ul
-          className="right"
+        <div
+          className="container"
         >
           <a
+            className="brand-logo"
             href="/"
             onClick={[Function]}
           >
-            Create Project
+            MarioPlan
           </a>
-          <a
-            href="/"
-            onClick={[Function]}
+          <ul
+            className="right"
           >
-            Logout
-          </a>
-          <a
-            className="btn btn-floating btn-pink"
-            href="/"
-            onClick={[Function]}
+            <li>
+              <a
+                href="/"
+                onClick={[Function]}
+              >
+                Create Project
+              </a>
+            </li>
+            <li>
+              <a
+                href="/"
+                onClick={[Function]}
+              >
+                Logout
+              </a>
+            </li>
+            <li>
+              <a
+                className="btn btn-floating pink lighten-3"
+                href="/"
+                onClick={[Function]}
+              >
+                NN
+              </a>
+            </li>
+          </ul>
+          <ul
+            class="right"
           >
-            NN
-          </a>
-        </ul>
-        <ul
-          class="right"
-        >
-          <a
-            href="/"
-            onClick={[Function]}
-          >
-            Sign Up
-          </a>
-          <a
-            href="/"
-            onClick={[Function]}
-          >
-            Login
-          </a>
-        </ul>
+            <li>
+              <a
+                href="/"
+                onClick={[Function]}
+              >
+                Sign Up
+              </a>
+            </li>
+            <li>
+              <a
+                href="/"
+                onClick={[Function]}
+              >
+                Login
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
+    </nav>
   `);
 });
