@@ -79,7 +79,11 @@ exports[`should render the expected HTML 1`] = `
       <div
         className="col s12 m6"
       >
-        Project List
+        <div>
+          <p>
+            Project List
+          </p>
+        </div>
       </div>
       <div
         className="col s12 m5 offset-m1"
