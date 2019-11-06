@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter} from 'react-router-dom'
+import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import Navbar from './components/layout/Navbar.react'
 import Dashboard from './components/dashboard/Dashboard.react'
 
@@ -8,7 +8,9 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Navbar />
-        <Dashboard />
+        <Switch>
+          <Route path="/" component={Dashboard} />
+        </Switch>
       </div>
     </BrowserRouter>
   )
