@@ -1,7 +1,7 @@
 import React from 'react'
-import Navbar from '../Navbar.react'
 import renderer from 'react-test-renderer'
 import {BrowserRouter as Router} from 'react-router-dom'
+import Navbar from '../Navbar.react'
 
 it('should render the navbar correctly', () => {
   const component = renderer.create(
@@ -25,6 +25,29 @@ it('should render the navbar correctly', () => {
         >
           MarioPlan
         </a>
+        <ul
+          className="right"
+        >
+          <a
+            href="/"
+            onClick={[Function]}
+          >
+            Create Project
+          </a>
+          <a
+            href="/"
+            onClick={[Function]}
+          >
+            Logout
+          </a>
+          <a
+            className="btn btn-floating btn-pink"
+            href="/"
+            onClick={[Function]}
+          >
+            NN
+          </a>
+        </ul>
       </div>
     </div>
   `)
