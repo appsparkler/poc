@@ -8,6 +8,7 @@ class SignIn extends Component {
       password: '',
     }
   }
+
   handleSubmit(e) {
     e.preventDefault()
     e.stopPropagation()
