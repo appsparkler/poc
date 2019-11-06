@@ -2,7 +2,7 @@
 
 exports[`should render correctly 1`] = `
 <ul
-  class="right"
+  className="right"
 >
   <li>
     <a

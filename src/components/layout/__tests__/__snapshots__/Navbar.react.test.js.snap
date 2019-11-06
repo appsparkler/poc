@@ -45,7 +45,7 @@ exports[`should render the navbar correctly 1`] = `
         </li>
       </ul>
       <ul
-        class="right"
+        className="right"
       >
         <li>
           <a

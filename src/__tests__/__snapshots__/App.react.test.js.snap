@@ -48,7 +48,7 @@ exports[`should render the expected HTML 1`] = `
           </li>
         </ul>
         <ul
-          class="right"
+          className="right"
         >
           <li>
             <a
