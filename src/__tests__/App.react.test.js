@@ -45,6 +45,22 @@ it("should render the expected HTML", () => {
               NN
             </a>
           </ul>
+          <ul
+            class="right"
+          >
+            <a
+              href="/"
+              onClick={[Function]}
+            >
+              Sign Up
+            </a>
+            <a
+              href="/"
+              onClick={[Function]}
+            >
+              Login
+            </a>
+          </ul>
         </div>
       </div>
     </div>

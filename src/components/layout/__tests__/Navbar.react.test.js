@@ -1,16 +1,16 @@
-import React from 'react'
-import renderer from 'react-test-renderer'
-import {BrowserRouter as Router} from 'react-router-dom'
-import Navbar from '../Navbar.react'
+import React from "react";
+import renderer from "react-test-renderer";
+import { BrowserRouter as Router } from "react-router-dom";
+import Navbar from "../Navbar.react";
 
-it('should render the navbar correctly', () => {
+it("should render the navbar correctly", () => {
   const component = renderer.create(
-      <Router>
-        <Navbar />
-      </Router>
-  )
-  const tree = component.toJSON()
-  expect.assertions(1)
+    <Router>
+      <Navbar />
+    </Router>
+  );
+  const tree = component.toJSON();
+  expect.assertions(1);
   expect(tree).toMatchInlineSnapshot(`
     <div
       className="navbar-wrapper gray darken-3"
@@ -48,7 +48,23 @@ it('should render the navbar correctly', () => {
             NN
           </a>
         </ul>
+        <ul
+          class="right"
+        >
+          <a
+            href="/"
+            onClick={[Function]}
+          >
+            Sign Up
+          </a>
+          <a
+            href="/"
+            onClick={[Function]}
+          >
+            Login
+          </a>
+        </ul>
       </div>
     </div>
-  `)
-})
+  `);
+});
