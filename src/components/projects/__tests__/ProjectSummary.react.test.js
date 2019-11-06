@@ -1,5 +1,5 @@
 import React from 'react'
-import ProjectSummary from '../ProjectSummary'
+import ProjectSummary from '../ProjectSummary.react'
 import renderer from 'react-rest-renderer'
 
 it('should render correctly', () => {
