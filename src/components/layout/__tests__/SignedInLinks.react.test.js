@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter as Router} from 'react-dom-router'
+import {BrowserRouter as Router} from 'react-router-dom'
 import renderer from 'react-test-renderer'
 import SignedInLinks from '../SignedInLinks.react'
 
@@ -11,5 +11,29 @@ it('should render correctly', () => {
       </Router>
   )
   const tree = component.toJSON()
-  expect(tree).toMatchInlineSnapshot()
+  expect(tree).toMatchInlineSnapshot(`
+    <ul
+      className="right"
+    >
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        Create Project
+      </a>
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        Logout
+      </a>
+      <a
+        className="btn btn-floating btn-pink"
+        href="/"
+        onClick={[Function]}
+      >
+        NN
+      </a>
+    </ul>
+  `)
 })
