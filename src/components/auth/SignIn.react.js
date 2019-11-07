@@ -15,7 +15,7 @@ export class SignIn extends Component {
   handleSubmit(e) {
     e.preventDefault()
     e.stopPropagation()
-    console.log(this.state)
+    // console.log(this.state)
   }
 
   handleChange(e) {

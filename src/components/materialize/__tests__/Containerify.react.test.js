@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import cardify from '../Cardify.react'
+import containerify from '../Containerify.react'
 import renderer from 'react-test-renderer'
 
 it('should correctly containerify a component', () => {
@@ -10,8 +10,7 @@ it('should correctly containerify a component', () => {
       )
     }
   }
-  const ContainerifiedComponent = cardify(TestComponent)
-  // const wrapper = shallow(<CardifiedComponent />)
+  const ContainerifiedComponent = containerify(TestComponent)
   const wrapper = renderer.create(<ContainerifiedComponent />)
   const tree = wrapper.toJSON()
   expect(tree).toMatchSnapshot()

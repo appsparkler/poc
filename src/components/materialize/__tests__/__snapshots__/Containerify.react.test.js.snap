@@ -2,14 +2,10 @@
 
 exports[`should correctly containerify a component 1`] = `
 <div
-  className="card"
+  className="container"
 >
-  <div
-    className="card-content"
-  >
-    <div>
-      Test Component for containerify hoc component
-    </div>
+  <div>
+    Test Component for containerify hoc component
   </div>
 </div>
 `;
