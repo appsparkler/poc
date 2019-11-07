@@ -20,7 +20,7 @@ exports[`should render the navbar correctly 1`] = `
       >
         <li>
           <a
-            href="/"
+            href="/create"
             onClick={[Function]}
           >
             Create Project

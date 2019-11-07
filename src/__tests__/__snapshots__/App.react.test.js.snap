@@ -23,7 +23,7 @@ exports[`should render the expected HTML 1`] = `
         >
           <li>
             <a
-              href="/"
+              href="/create"
               onClick={[Function]}
             >
               Create Project
