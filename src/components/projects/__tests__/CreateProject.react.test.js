@@ -1,5 +1,5 @@
 import React from 'react'
-import CreateProject from '../CreateProject.react'
+import {CreateProject} from '../CreateProject.react'
 import renderer from 'react-test-renderer'
 import Adapter from 'enzyme-adapter-react-16'
 import {configure, mount} from 'enzyme'
@@ -16,7 +16,9 @@ it('should render correctly', ()=> {
 })
 
 it('should update the state on input in title-field in form', ()=> {
-  const component = mount(<CreateProject />)
+  const component = mount(
+      <CreateProject />
+  )
   const titleInputField = component.find('input#title')
   const CHANGED_VALUE = 'This is a new project'
   titleInputField.simulate('change', {

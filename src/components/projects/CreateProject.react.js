@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import cardify from '../materialize/Cardify.react'
 import containerify from '../materialize/Containerify.react'
 
-class CreateProject extends Component {
+export class CreateProject extends Component {
   constructor() {
     super()
     this.state = {
