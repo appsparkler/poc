@@ -1,5 +1,5 @@
 import React from 'react'
-import SignIn from '../SignIn.react'
+import {SignIn} from '../SignIn.react'
 import renderer from 'react-test-renderer'
 import Adapter from 'enzyme-adapter-react-16'
 import Enzyme, {shallow} from 'enzyme'

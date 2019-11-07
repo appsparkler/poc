@@ -3,7 +3,7 @@ import Title from '../materialize/Title.react'
 import cardify from '../materialize/Cardify.react'
 import containerify from '../materialize/Containerify.react'
 
-class SignIn extends Component {
+export class SignIn extends Component {
   constructor() {
     super()
     this.state = {

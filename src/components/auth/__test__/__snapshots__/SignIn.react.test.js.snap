@@ -1,65 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render correctly 1`] = `
-<div
-  className="container"
+<form
+  onSubmit={[Function]}
 >
-  <div
-    className="card"
+  <h4
+    className="header grey-text text-darken-3"
   >
-    <div
-      className="card-content"
+    Login
+  </h4>
+  <div
+    className="input-field"
+  >
+    <label
+      htmlFor="email"
     >
-      <form
-        onSubmit={[Function]}
-      >
-        <h4
-          className="header grey-text text-darken-3"
-        >
-          Login
-        </h4>
-        <div
-          className="input-field"
-        >
-          <label
-            htmlFor="email"
-          >
-            Email
-          </label>
-          <input
-            className="pink-text"
-            id="email"
-            onChange={[Function]}
-            type="email"
-          />
-        </div>
-        <div
-          className="input-field"
-        >
-          <label
-            htmlFor="password"
-          >
-            Password
-          </label>
-          <input
-            className="pink-text"
-            id="password"
-            onChange={[Function]}
-            type="password"
-          />
-        </div>
-        <div
-          className="input-field"
-        >
-          <button
-            className="btn pink lighten-1 z-depth-0"
-            type="submit"
-          >
-            Login
-          </button>
-        </div>
-      </form>
-    </div>
+      Email
+    </label>
+    <input
+      className="pink-text"
+      id="email"
+      onChange={[Function]}
+      type="email"
+    />
   </div>
-</div>
+  <div
+    className="input-field"
+  >
+    <label
+      htmlFor="password"
+    >
+      Password
+    </label>
+    <input
+      className="pink-text"
+      id="password"
+      onChange={[Function]}
+      type="password"
+    />
+  </div>
+  <div
+    className="input-field"
+  >
+    <button
+      className="btn pink lighten-1 z-depth-0"
+      type="submit"
+    >
+      Login
+    </button>
+  </div>
+</form>
 `;
