@@ -33,7 +33,7 @@ class CreateProject extends Component {
           </label>
           <input
             id="title"
-            type="email"
+            type="text"
             onChange={this.handleChange.bind(this)} />
         </div>
         <div className="input-field">
