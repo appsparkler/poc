@@ -1,4 +1,7 @@
 import React, {Component} from 'react'
+import Title from '../materialize/Title.react'
+import cardify from '../materialize/Cardify.react'
+import containerify from '../materialize/Containerify.react'
 
 class SignUp extends Component {
   constructor() {
@@ -25,57 +28,55 @@ class SignUp extends Component {
 
   render() {
     return (
-      <div className="container">
-        <form onSubmit={this.handleSubmit.bind(this)} className="white">
-          <h5 className="grey-text text-darken-3">Sign In</h5>
-          <div className="input-field">
-            <label htmlFor="email">
-              Email
-            </label>
-            <input
-              id="email"
-              type="email"
-              onChange={this.handleChange.bind(this)} />
-          </div>
-          <div className="input-field">
-            <label htmlFor="password">
-              Password
-            </label>
-            <input
-              id="password"
-              type="password"
-              onChange={this.handleChange.bind(this)}
-            />
-          </div>
-          <div className="input-field">
-            <label htmlFor="firstName">
-              First Name
-            </label>
-            <input
-              id="firstName"
-              type="text"
-              onChange={this.handleChange.bind(this)}
-            />
-          </div>
-          <div className="input-field">
-            <label htmlFor="lastName">
-              Last Name
-            </label>
-            <input
-              id="lastName"
-              type="text"
-              onChange={this.handleChange.bind(this)}
-            />
-          </div>
-          <div className="input-field">
-            <button className="btn pink lighten-1 z-depth-0" type="submit">
-              SignUp
-            </button>
-          </div>
-        </form>
-      </div>
+      <form onSubmit={this.handleSubmit.bind(this)} className="white">
+        <Title title="Sign Up"/>
+        <div className="input-field">
+          <label htmlFor="email">
+            Email
+          </label>
+          <input
+            id="email"
+            type="email"
+            onChange={this.handleChange.bind(this)} />
+        </div>
+        <div className="input-field">
+          <label htmlFor="password">
+        Password
+          </label>
+          <input
+            id="password"
+            type="password"
+            onChange={this.handleChange.bind(this)}
+          />
+        </div>
+        <div className="input-field">
+          <label htmlFor="firstName">
+        First Name
+          </label>
+          <input
+            id="firstName"
+            type="text"
+            onChange={this.handleChange.bind(this)}
+          />
+        </div>
+        <div className="input-field">
+          <label htmlFor="lastName">
+        Last Name
+          </label>
+          <input
+            id="lastName"
+            type="text"
+            onChange={this.handleChange.bind(this)}
+          />
+        </div>
+        <div className="input-field">
+          <button className="btn pink lighten-1 z-depth-0" type="submit">
+        SignUp
+          </button>
+        </div>
+      </form>
     )
   }
 }
 
-export default SignUp
+export default containerify(cardify(SignUp))

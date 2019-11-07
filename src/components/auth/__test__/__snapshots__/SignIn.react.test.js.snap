@@ -4,53 +4,62 @@ exports[`should render correctly 1`] = `
 <div
   className="container"
 >
-  <form
-    className="white"
-    onSubmit={[Function]}
+  <div
+    className="card"
   >
-    <h5
-      className="grey-text text-darken-3"
-    >
-      Sign In
-    </h5>
     <div
-      className="input-field"
+      className="card-content"
     >
-      <label
-        htmlFor="email"
+      <form
+        onSubmit={[Function]}
       >
-        Email
-      </label>
-      <input
-        id="email"
-        onChange={[Function]}
-        type="email"
-      />
+        <h4
+          className="header grey-text text-darken-3"
+        >
+          Login
+        </h4>
+        <div
+          className="input-field"
+        >
+          <label
+            htmlFor="email"
+          >
+            Email
+          </label>
+          <input
+            className="pink-text"
+            id="email"
+            onChange={[Function]}
+            type="email"
+          />
+        </div>
+        <div
+          className="input-field"
+        >
+          <label
+            htmlFor="password"
+          >
+            Password
+          </label>
+          <input
+            className="pink-text"
+            id="password"
+            onChange={[Function]}
+            type="password"
+          />
+        </div>
+        <div
+          className="input-field"
+        >
+          <button
+            className="btn pink lighten-1 z-depth-0"
+            type="submit"
+          >
+            Login
+          </button>
+        </div>
+      </form>
     </div>
-    <div
-      className="input-field"
-    >
-      <label
-        htmlFor="password"
-      >
-        Password
-      </label>
-      <input
-        id="password"
-        onChange={[Function]}
-        type="password"
-      />
-    </div>
-    <div
-      className="input-field"
-    >
-      <button
-        className="btn pink lighten-1 z-depth-0"
-        type="submit"
-      >
-        Login
-      </button>
-    </div>
-  </form>
+  </div>
 </div>
 `;
