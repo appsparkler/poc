@@ -1,11 +1,5 @@
-const actions = {
-  createProject: (project)=> ({type: 'CREATE PROJECT', project}),
-}
-
-export const asyncCreateProject = (project) => {
-  return function(dispatch) {
-    setTimeout(function() {
-      dispatch(actions.createProject)
-    }, 3000)
-  }
-}
+export const createProject = (project) => ((dispatch)=>(
+  setTimeout(()=> (
+    dispatch({type: 'CREATE_PROJECT', project})
+  ), 500)
+))

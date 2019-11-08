@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {asyncCreateProject} from '../../store/actions/project'
+import {createProject} from '../../store/actions/project'
 import cardify from '../materialize/Cardify.react'
 import containerify from '../materialize/Containerify.react'
 
@@ -16,7 +16,7 @@ export class CreateProject extends Component {
   handleSubmit(e) {
     e.preventDefault()
     e.stopPropagation()
-    this.props.asyncCreateProject(this.state)
+    this.props.createProject(this.state)
   }
 
   handleChange(e) {
@@ -59,5 +59,5 @@ export class CreateProject extends Component {
 }
 
 export default containerify(cardify(
-    connect(null, {asyncCreateProject})(CreateProject)
+    connect(null, {createProject})(CreateProject)
 ))

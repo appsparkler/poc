@@ -6,6 +6,7 @@ module.exports = {
   ],
   rules: {
     semi: [2, 'never'],
-    'require-jsdoc': 0
+    'require-jsdoc': 0,
+    'no-valid-this':0
   }
 }
