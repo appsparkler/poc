@@ -1,4 +1,6 @@
 import React, {Component} from 'react'
+import {connect} from 'react-redux'
+import {createProject} from '../../store/actions/project'
 import cardify from '../materialize/Cardify.react'
 import containerify from '../materialize/Containerify.react'
 
@@ -14,6 +16,7 @@ export class CreateProject extends Component {
   handleSubmit(e) {
     e.preventDefault()
     e.stopPropagation()
+    this.props.createProject(this.state)
     // console.log(this.state)
   }
 
@@ -56,4 +59,10 @@ export class CreateProject extends Component {
   }
 }
 
-export default containerify(cardify(CreateProject))
+const mapDispatchToProps = (dispatch) => ({
+  createProject: (project) => dispatch(createProject(project)),
+})
+
+export default containerify(cardify(
+    connect(null, mapDispatchToProps)(CreateProject)
+))
