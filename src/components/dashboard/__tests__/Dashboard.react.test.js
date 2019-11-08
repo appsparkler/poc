@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Dashboard from '../Dashboard.react'
+import {Dashboard} from '../Dashboard.react'
 
 it('should render as expected', () => {
   const component = renderer.create(<Dashboard />)
