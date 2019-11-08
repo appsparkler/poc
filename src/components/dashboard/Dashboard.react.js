@@ -6,7 +6,6 @@ import {getProjects} from '../../store/getters/project'
 
 export class Dashboard extends Component {
   render() {
-    console.log(this.props)
     return (
       <div className="dashboard container">
         <div className="row">
