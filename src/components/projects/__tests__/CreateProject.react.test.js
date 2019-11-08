@@ -45,8 +45,11 @@ it(`should update the state on change in the content text-area`, ()=> {
 
 it(`preventDefault and stopPropagation
     events to have been called on form-submit`, ()=> {
-  expect.assertions(2)
-  const component = shallow(<CreateProject />)
+  expect.assertions(3)
+  const props = {
+    createProject: jest.fn(),
+  }
+  const component = shallow(<CreateProject {...props} />)
   const emailInput = component.find('form')
   const preventDefault = jest.fn()
   const stopPropagation = jest.fn()
@@ -56,4 +59,5 @@ it(`preventDefault and stopPropagation
   })
   expect(preventDefault).toHaveBeenCalledTimes(1)
   expect(stopPropagation).toHaveBeenCalledTimes(1)
+  expect(props.createProject).toHaveBeenCalledTimes(1)
 })
