@@ -10,7 +10,7 @@ exports[`should render correctly 1`] = `
     <span
       className="card-title"
     >
-      Project Title
+      Hello World
     </span>
     <p>
       Posted By Net Ninja
