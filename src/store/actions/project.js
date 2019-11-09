@@ -5,13 +5,13 @@ export const createProject = (project) => ((dispatch)=>{
   //
   return db.collection('projects')
       .add(project)
-      .then((projectDoc) => (
+      .then((projectDoc) => {
         dispatch({type: 'CREATE_PROJECT', projectDoc})
-      ))
-      .catch((err)=>(
+      })
+      .catch((err)=>{
         dispatch({type: 'CREATE_PROJECT_ERROR', err, project})
-      ))
-      .finally(()=>(
+      })
+      .finally(()=>{
         dispatch({type: 'CREATE_PROJECT_DONE'})
-      ))
+      })
 })
