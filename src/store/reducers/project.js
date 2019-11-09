@@ -8,8 +8,20 @@ const initState = {
 
 const projectReducer = (state = initState, action) => {
   switch (action.type) {
+    case 'CREATE_PROJECT_STARTED':
+      console.log(action)
+      break
+
     case 'CREATE_PROJECT':
-      console.log(action.project)
+      console.log(action)
+      break
+
+    case 'CREATE_PROJECT_DONE':
+      console.log(action)
+      break
+
+    case 'CREATE_PROJECT_ERROR':
+      console.log(action)
       break
 
     default:
