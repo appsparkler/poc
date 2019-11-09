@@ -1,22 +1,27 @@
 import {createStore, applyMiddleware, compose} from 'redux'
 import thunk from 'redux-thunk'
 import rootReducer from './reducers/root'
-import {getFirestore, reduxFirestore} from 'redux-firestore'
-import {getFirebase, reactReduxFirebase} from 'react-redux-firebase'
-import firebaseConfig from '../config/firebase'
+import {getFirebase} from 'react-redux-firebase'
 
-const store = createStore(
+/*
+const initialState = window && window.__INITIAL_STATE__
+// set initial state here
+const store = configureStore(initialState)
+// Initialize Firebase instance
+firebase.initializeApp(fbConfig)
+*/
+
+const middleware = [
+  thunk.withExtraArgument({getFirebase}),
+]
+
+//
+const createStoreWithMiddleware = compose(
+    applyMiddleware(...middleware)
+)(createStore)
+//
+const store = createStoreWithMiddleware(
     rootReducer,
-    compose(
-        applyMiddleware(thunk.withExtraArgument({
-          getFirebase, getFirestore,
-        })),
-        // new ReactReduxFirebase(firebaseConfig)
-        reduxFirestore(firebaseConfig),
-    ),
-    // compose(
-    //     ,
-    // ),
 )
-
+//
 export default store

@@ -13,11 +13,17 @@ const firebaseConfig = {
   appId: '1:118979864382:web:28c84c1d4c37948bd66e6f',
 }
 
+export const rrfConfig = {
+  userProfile: 'users',
+  useFirestoreForProfile: true, // Store in Firestore instead of Real Time DB
+  enableLogging: false,
+}
+
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig)
 firebase.firestore()
-// .settings({
-//   timestampsInSnapshots: true,
-// })
+    .settings({
+      // timestampsInSnapshots: true,
+    })
 
 export default firebase
