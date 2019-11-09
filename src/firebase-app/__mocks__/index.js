@@ -15,15 +15,3 @@ export const db = {
     },
   }),
 }
-
-// function promiseForAddingCollection(collection, resolve, reject) {
-//   process.nextTick(() =>(
-//
-//   )
-// console.log(collection.match(/error/))
-// if (collection.match(/error/)) {
-//   console.log('rejecting...', reject)
-//   reject('resolved to false')
-// } else resolve('resolved true')
-//   )
-// }
