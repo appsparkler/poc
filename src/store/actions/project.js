@@ -3,7 +3,7 @@ import {db} from '../../firebase-app'
 export const createProject = (project) => ((dispatch)=>{
   dispatch({type: 'CREATE_PROJECT_STARTED'})
   //
-  db.collection('projects')
+  return db.collection('projects')
       .add(project)
       .then((projectDoc) => (
         dispatch({type: 'CREATE_PROJECT', projectDoc})
