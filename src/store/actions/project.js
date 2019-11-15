@@ -13,4 +13,5 @@ export const fetchAndStoreProjects = () => (async (dispatch)=> {
   dispatch({type: 'FETCH_PROJECTS_STARTED'})
   const docs = await db.collection('projects').get()
   docs.forEach((doc) => dispatch({type: 'STORE_PROJECT', project: doc.data()}))
+  dispatch({type: 'FETCH_PROJECTS_DONE'})
 })

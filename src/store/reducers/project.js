@@ -1,5 +1,6 @@
 const initState = {
   projects: [],
+  fetchingProjects: false,
 }
 
 const projectReducer = (state = initState, action) => {
@@ -8,8 +9,10 @@ const projectReducer = (state = initState, action) => {
   }
   switch (action.type) {
     case 'FETCH_PROJECTS_STARTED':
-      console.log('fetching projects started')
-      break
+      return {
+        ...state,
+        fetchingProjects: true,
+      }
 
     case 'STORE_PROJECT':
       return {
