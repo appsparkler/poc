@@ -2,8 +2,6 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import Notifications from './Notifications.react'
 import ProjectList from '../projects/ProjectList.react'
-import {getProjects} from '../../store/getters/project'
-import './Dashboard.styles.sass'
 
 export class Dashboard extends Component {
   render() {
@@ -11,10 +9,12 @@ export class Dashboard extends Component {
       <div className="dashboard container">
         <div className="row">
           <div className="col s12 m6">
-            <div className="loader-wrapper">
-              <img src="/img/loader.gif" alt="loader" />
-            </div>
-            <ProjectList projects={this.props.projects} />
+            {this.props.project.fetchingProjects ?
+              <h4 className="center blue-text text-darken-2">
+                Loading Projects...
+              </h4>:
+              <ProjectList projects={this.props.project.projects} />
+            }
           </div>
           <div className="col s12 m5 offset-m1">
             <Notifications />
@@ -25,6 +25,6 @@ export class Dashboard extends Component {
   }
 }
 
-export default connect((state)=> ({
-  projects: getProjects(state),
+export default connect(({project})=> ({
+  project,
 }))(Dashboard)

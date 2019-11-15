@@ -13,5 +13,12 @@ export const db = {
         })
       })
     },
+    get: ()=> {
+      return new Promise(function(resolve, reject) {
+        process.nextTick(()=> {
+          resolve([])
+        })
+      })
+    },
   }),
 }

@@ -1,54 +1,21 @@
 import * as projectActions from '../project'
 jest.mock('../../../firebase-app')
 
-it('should return createProject action correctly', ()=> {
-  expect.assertions(3)
+it('should execute fetchAndStoreProjects action', async () =>{
+  expect.assertions(2)
+  const dispatch = jest.fn()
+  const fetchAndStoreProjects = projectActions.fetchAndStoreProjects()
+  expect(typeof fetchAndStoreProjects).toBe('function')
+  await fetchAndStoreProjects(dispatch)
+  expect(dispatch).toHaveBeenCalledTimes(2)
+})
+
+it('should execute createProject action correctly', async ()=> {
+  expect.assertions(2)
   const dispatch = jest.fn()
   const createProjectResponseFn = projectActions
       .createProject('test-project')
-  return createProjectResponseFn(dispatch)
-      .then(() => {
-        expect(dispatch).toHaveBeenNthCalledWith(1, {
-          type: 'CREATE_PROJECT_STARTED',
-        })
-        expect(dispatch).toHaveBeenNthCalledWith(2, {
-          projectDoc: {
-            'message': 'resolved',
-          },
-          type: 'CREATE_PROJECT',
-        })
-        expect(dispatch).toHaveBeenNthCalledWith(3, {
-          type: 'CREATE_PROJECT_DONE',
-        })
-      })
-      .catch((err) => {
-        console.log(err)
-      })
-})
-
-it('should reject createProject action correctly', ()=> {
-  expect.assertions(3)
-  const dispatch = jest.fn()
-  const createProjectResponseFn = projectActions
-      .createProject('test-project-error')
-  return createProjectResponseFn(dispatch)
-      .then(() => {
-        // expect(di)
-        expect(dispatch).toHaveBeenNthCalledWith(1, {
-          type: 'CREATE_PROJECT_STARTED',
-        })
-        expect(dispatch).toHaveBeenNthCalledWith(2, {
-          err: new Error({
-            error: 'rejected',
-          }),
-          project: 'test-project-error',
-          type: 'CREATE_PROJECT_ERROR',
-        })
-        expect(dispatch).toHaveBeenNthCalledWith(3, {
-          type: 'CREATE_PROJECT_DONE',
-        })
-      })
-      .catch((err) => {
-        console.log(err)
-      })
+  expect(typeof createProjectResponseFn).toBe('function')
+  await createProjectResponseFn(dispatch)
+  expect(dispatch).toHaveBeenCalledTimes(3)
 })

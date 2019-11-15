@@ -1,3 +1,7 @@
 module.exports = {
-  presets: ['@babel/env', '@babel/react']
+  presets: [['@babel/env', {
+    "targets": {
+      "node": "current"
+    }
+  }], '@babel/react']
 }

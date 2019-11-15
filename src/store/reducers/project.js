@@ -20,9 +20,11 @@ const projectReducer = (state = initState, action) => {
         projects: [...state.projects, action.project],
       }
 
-    case 'STORE_PROJECTS_DONE':
-      console.log('store projects done...')
-      break
+    case 'FETCH_PROJECTS_DONE':
+      return {
+        ...state,
+        fetchingProjects: false,
+      }
 
     case 'CREATE_PROJECT_STARTED':
       console.log(action)

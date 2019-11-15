@@ -4,7 +4,7 @@ import ProjectSummary from './ProjectSummary.react'
 const ProjectList = ({projects}) => {
   return (
     <div className="project-list section">
-      { projects && projects.length && projects.map((project, i) => (
+      { projects && projects.map((project, i) => (
         <ProjectSummary project={project} key={`project-summary-${i}`} />
       ))}
     </div>

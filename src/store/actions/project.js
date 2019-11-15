@@ -2,7 +2,6 @@ import {db} from '../../firebase-app'
 
 export const createProject = (project) => (async (dispatch)=>{
   dispatch({type: 'CREATE_PROJECT_STARTED'})
-  //
   const projectDoc = await db.collection('projects').add(project)
   dispatch({type: 'CREATE_PROJECT', projectDoc})
   //   dispatch({type: 'CREATE_PROJECT_ERROR', err, project})
