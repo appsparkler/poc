@@ -1,13 +1,26 @@
 const initState = {
-  projects: [
-    {id: '1', title: 'help me find peach', content: 'blah blah blah'},
-    {id: '2', title: 'collect all the stars', content: 'blah blah blah'},
-    {id: '3', title: 'egg hunt with yoshi', content: 'blah blah blah'},
-  ],
+  projects: [],
 }
 
 const projectReducer = (state = initState, action) => {
+  const newState = {
+    ...state,
+  }
   switch (action.type) {
+    case 'FETCH_PROJECTS_STARTED':
+      console.log('fetching projects started')
+      break
+
+    case 'STORE_PROJECT':
+      return {
+        ...state,
+        projects: [...state.projects, action.project],
+      }
+
+    case 'STORE_PROJECTS_DONE':
+      console.log('store projects done...')
+      break
+
     case 'CREATE_PROJECT_STARTED':
       console.log(action)
       break
@@ -27,7 +40,7 @@ const projectReducer = (state = initState, action) => {
     default:
       break
   }
-  return state
+  return newState
 }
 
 export default projectReducer

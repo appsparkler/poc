@@ -5,6 +5,13 @@ import ProjectList from '../projects/ProjectList.react'
 import {getProjects} from '../../store/getters/project'
 
 export class Dashboard extends Component {
+  componentDidMount() {
+    // hydrate store with projects
+    console.log(this.props.projects)
+  }
+  componentDidUpdate(props) {
+    console.log('component did update....', props.projects)
+  }
   render() {
     return (
       <div className="dashboard container">

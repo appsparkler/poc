@@ -14,3 +14,11 @@ const config = {
 firebase.initializeApp(config)
 
 export const db = firebase.firestore()
+// db.collection('projects')
+//     .get()
+//     .then(function(querySnapshot) {
+//       querySnapshot.forEach((doc) => {
+//         if (doc.exists) console.log(doc.data())
+//         else console.log('doc dont exist')
+//       })
+//     })
