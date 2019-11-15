@@ -7,6 +7,7 @@ it('should render as expected', () => {
   const mockStore = configureMockStore()
   const store = mockStore({
     project: {
+      fetchingProjects: true,
       projects: [{
         id: '1',
         title: 'Title 1',

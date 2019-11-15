@@ -10,31 +10,11 @@ exports[`should render as expected 1`] = `
     <div
       className="col s12 m6"
     >
-      <div
-        className="project-list section"
+      <h4
+        className="center blue-text text-darken-2"
       >
-        <div
-          className="project-summary card z-depth-0"
-        >
-          <div
-            className="card-content grey-text text-darken-3"
-          >
-            <span
-              className="card-title"
-            >
-              Title 1
-            </span>
-            <p>
-              Posted By Net Ninja
-            </p>
-            <p
-              className="grey-text"
-            >
-              3rd September, 2am
-            </p>
-          </div>
-        </div>
-      </div>
+        Loading Projects...
+      </h4>
     </div>
     <div
       className="col s12 m5 offset-m1"
