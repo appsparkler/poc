@@ -83,7 +83,7 @@ exports[`should render the expected HTML 1`] = `
           className="project-list section"
         >
           <div
-            className="project-summary card z-depth-0"
+            className="project-summary card"
           >
             <div
               className="card-content grey-text text-darken-3"
