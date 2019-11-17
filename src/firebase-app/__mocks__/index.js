@@ -1,8 +1,9 @@
 const firebasemock = require('firebase-mock')
-// export const db = new firebasemock.MockFirestore()
 
-export default class FirebaseApp {
+class FirebaseApp {
   constructor() {
     this.db = new firebasemock.MockFirestore()
   }
 }
+
+export const {db} = new FirebaseApp()

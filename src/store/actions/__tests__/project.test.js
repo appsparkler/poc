@@ -1,23 +1,18 @@
 import * as projectActions from '../project'
 
 jest.mock('../../../firebase-app', ()=> {
-  const FirebaseApp = require('../../../firebase-app/__mocks__')
-  return class MockedFirebaseApp extends FirebaseApp.default {
-    constructor() {
-      super()
-      this.db.collection('projects').add({
-        title: 'Project 1',
-        body: 'This is Project 1',
-      })
-      this.db.autoFlush(1000)
-    }
-  }
+  const db = (require('../../../firebase-app/__mocks__')).db
+  db.collection('projects').add({
+    title: 'Project 1',
+    body: 'This is Project 1',
+  })
+  db.autoFlush(1000)
+  return {db}
 })
 
 describe('createProject Function', ()=> {
   const {createProject} = projectActions
   const dispatcher = createProject()
-  beforeEach(()=> console.log('before each is being called...'))
 
   it('should return a function', () => {
     expect(typeof createProject).toBe('function')
@@ -28,7 +23,7 @@ describe('createProject Function', ()=> {
   })
 
   test(`the argument passed to dispatcher to be
-    a function that is called a few times`, async ()=> {
+    a function that is called at least once`, async ()=> {
     const dispatchFunction = jest.fn()
     await dispatcher(dispatchFunction)
     expect(dispatchFunction).toHaveBeenCalled()
