@@ -6,7 +6,6 @@ import 'materialize-css/dist/js/materialize.min'
 import './index.css'
 import App from './App.react.js'
 import store from './store'
-
 const AppJSX = (
   <Provider store={store}>
     <App />

@@ -9,11 +9,11 @@ class FirebaseApp {
 }
 
 export const {db} = new FirebaseApp({
-  apiKey: 'AIzaSyCEe-9P0ugfD-KUPTz5TbBEVE6zGM5Zl3M',
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: 'the-marioplan.firebaseapp.com',
   databaseURL: 'https://the-marioplan.firebaseio.com',
   projectId: 'the-marioplan',
   storageBucket: 'the-marioplan.appspot.com',
-  messagingSenderId: '118979864382',
-  appId: '1:118979864382:web:67fb4e68d30e14dad66e6f',
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
 })
