@@ -6,7 +6,7 @@ class ThemeContextProvider extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      isLightTheme: true,
+      theme: 'dark',
     }
   }
   render() {

@@ -4,9 +4,9 @@ import {ThemeContext} from '../../context/ThemeContext.react'
 class Navbar extends Component {
   static contextType = ThemeContext
   render() {
-    console.log(this.context)
+    const {theme} = this.context
     return (
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav className={`navbar navbar-expand-lg navbar-${theme} bg-${theme}`}>
         <a className="navbar-brand" href="/">Context App</a>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
