@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import uuid from 'uuid/v1'
 
 function handleSubmit(setSongs, songs, evt) {
   evt.preventDefault()
@@ -11,7 +12,7 @@ function handleSubmit(setSongs, songs, evt) {
       ...songs,
       {
         title: formData.get('song'),
-        id: new Date().getTime().toString(),
+        id: uuid(),
       },
     ])
   }
@@ -20,9 +21,9 @@ function handleSubmit(setSongs, songs, evt) {
 
 const SongList = () => {
   const [songs, setSongs] = useState([
-    {title: 'Song 1', id: '1'},
-    {title: 'Song 2', id: '2'},
-    {title: 'Song 3', id: '3'},
+    {title: 'Song 1', id: uuid()},
+    {title: 'Song 2', id: uuid()},
+    {title: 'Song 3', id: uuid()},
   ])
 
   return (
