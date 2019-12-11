@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from './components/Navbar/Navbar.react'
 import BookList from './components/BookList/BookList.react'
 import ThemeContextProvider from './context/ThemeContext.react'
+import SongList from './components/SongList/SongList.react'
 import ThemeSwitch from './components/ThemeSwitch/ThemeSwitch.react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap'
@@ -14,6 +15,7 @@ class App extends React.Component {
           <ThemeSwitch />
           <Navbar />
           <BookList />
+          <SongList />
         </ThemeContextProvider>
       </div>
     )
