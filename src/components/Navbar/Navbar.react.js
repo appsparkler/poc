@@ -6,9 +6,11 @@ class Navbar extends Component {
   render() {
     const {theme} = this.context
     return (
-      <nav className={`navbar navbar-expand-lg navbar-${theme} bg-${theme}`}>
+      <nav
+        className={`navbar navbar-expand-lg navbar-${theme} bg-${theme} mt-2`}
+      >
         <a className="navbar-brand" href="/">Context App</a>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <div className="collapse navbar-collapse">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
               <a className="nav-link" href="/home">Home</a>
