@@ -5,7 +5,6 @@ import ThemeContextProvider from './context/ThemeContext.react'
 import ThemeSwitch from './components/ThemeSwitch/ThemeSwitch.react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap'
-import './App.css'
 
 class App extends React.Component {
   render() {
