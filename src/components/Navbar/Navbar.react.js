@@ -10,7 +10,8 @@ class Navbar extends Component {
             className={
               `navbar navbar-expand-lg
                 navbar-${theme} bg-${theme}
-                mt-2`
+                mt-2
+                border border-primary`
             }
           >
             <a className="navbar-brand" href="/">

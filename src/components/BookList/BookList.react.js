@@ -7,7 +7,7 @@ class BookList extends Component {
       <ThemeContext.Consumer>
         {
           ({theme})=>(
-            <ul className={`list-group rounded-0 mt-2`}>
+            <ul className={`list-group rounded-0 mt-2 border border-primary`}>
               <li className={`list-group-item rounded-0
                     list-group-item-${theme}`
               }>
