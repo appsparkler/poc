@@ -64,7 +64,7 @@ const SongList = () => {
       </ul>
 
       <button
-        class="btn btn-primary mt-2"
+        className="btn btn-primary mt-2"
         onClick={() => setExpectedSongs(expectedSongs + 1)}
       >
         Add 1 to expected-songs: {expectedSongs}
