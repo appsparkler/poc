@@ -26,8 +26,11 @@ const SongList = () => {
     {title: 'Song 3', id: uuid()},
   ])
 
+  const [expectedSongs, setExpectedSongs] = useState(20)
+
   return (
-    <div className="SongList">
+    <div className="SongList border border-success border-3 mt-2 p-2">
+      <h4 className="text-primary">Song List Component...</h4>
       <form
         className="mt-2 rounded-0"
         onSubmit={handleSubmit.bind(null, setSongs, songs)}>
@@ -59,6 +62,13 @@ const SongList = () => {
           </li>
         ))}
       </ul>
+
+      <button
+        class="btn btn-primary mt-2"
+        onClick={() => setExpectedSongs(expectedSongs + 1)}
+      >
+        Add 1 to expected-songs: {expectedSongs}
+      </button>
     </div>
   )
 }
