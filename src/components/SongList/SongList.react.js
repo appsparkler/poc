@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import uuid from 'uuid/v1'
 
 function handleSubmit(setSongs, songs, evt) {
@@ -27,6 +27,14 @@ const SongList = () => {
   ])
 
   const [expectedSongs, setExpectedSongs] = useState(20)
+
+  useEffect(() => {
+    console.log('use-effect executed on songs change', songs)
+  }, [songs])
+
+  useEffect(() => {
+    console.log('use effect executed on expectedSongs change', expectedSongs)
+  }, [expectedSongs])
 
   return (
     <div className="SongList border border-success border-3 mt-2 p-2">
