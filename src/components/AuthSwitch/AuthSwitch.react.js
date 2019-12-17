@@ -1,20 +1,16 @@
 import React, {useContext} from 'react'
 import {AuthContext} from '../../context/AuthContext.react'
 
-function handleFormChange(isAuthenticated, toggleAuthenticated, evt) {
-  console.log(evt.currentTarget)
-  const form = evt.currentTarget
-  const fd = new FormData(form)
-  console.log(fd.get('AuthStatus'))
+function handleFormChange(toggleAuthenticated, evt) {
+  toggleAuthenticated()
 }
 
 export default function() {
   const {isAuthenticated, toggleAuthenticated} = useContext(AuthContext)
-  // const [AuthStatus, setAuthStatus] = useState(isAuthenticated)
   return (<form
     className="AuthSwitch border border-warning p-2"
     onChange={handleFormChange
-        .bind(null, isAuthenticated, toggleAuthenticated)}
+        .bind(null, toggleAuthenticated)}
   >
     <h4>Is Authenticated?</h4>
     <div className="form-check">
@@ -39,6 +35,6 @@ export default function() {
           No
       </label>
     </div>
-    <pre>Auth State: {isAuthenticated}</pre>
+    <pre>Auth State: {isAuthenticated.toString()}</pre>
   </form>)
 }

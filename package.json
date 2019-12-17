@@ -30,7 +30,8 @@
       "semi": [
         2,
         "never"
-      ]
+      ],
+      "no-invalid-this": 0
     }
   },
   "browserslist": {

@@ -4,18 +4,21 @@ export const AuthContext = createContext()
 
 
 class AuthContextProvider extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      isAuthenticated: false,
-    }
+  state = {
+    isAuthenticated: true,
+  }
+
+  toggleAuthenticated = () => {
+    this.setState({
+      isAuthenticated: !this.state.isAuthenticated,
+    })
   }
 
   render() {
-    const toggleAuthenticated = () => !this.state.isAuthenticated
+    const {state, toggleAuthenticated} = this
     return (
       <AuthContext.Provider value={{
-        ...this.state,
+        ...state,
         toggleAuthenticated,
       }}>
         {this.props.children}
