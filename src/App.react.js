@@ -15,7 +15,9 @@ class App extends React.Component {
       <div className="App container">
         <ThemeContextProvider>
           <AuthContextProvider>
-            <AuthSwitch />
+            <div className="mt-2">
+              <AuthSwitch />
+            </div>
             <ThemeSwitch />
             <Navbar />
             <BookList />
