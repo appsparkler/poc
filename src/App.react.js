@@ -6,6 +6,8 @@ import AuthContextProvider from './context/AuthContext.react'
 import SongList from './components/SongList/SongList.react'
 import ThemeSwitch from './components/ThemeSwitch/ThemeSwitch.react'
 import AuthSwitch from './components/AuthSwitch/AuthSwitch.react'
+import AuthAndThemeSwitch from
+  './components/AuthAndThemeSwitch/AuthAndThemeSwitch.react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap'
 
@@ -15,6 +17,7 @@ class App extends React.Component {
       <div className="App container">
         <ThemeContextProvider>
           <AuthContextProvider>
+            <AuthAndThemeSwitch />
             <div className="mt-2">
               <AuthSwitch />
             </div>
