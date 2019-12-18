@@ -3,11 +3,12 @@ import {ThemeContext} from '../../context/ThemeContext.react'
 
 function ThemeSwitch() {
   const {toggleTheme} = useContext(ThemeContext)
-  return (
+  return (<div className="ThemeSwitch border border-primary mt-2 p-2">
+    <h4>Theme Switch</h4>
     <form onChange={toggleTheme}>
       <div
         className="btn-group btn-group-toggle rounded-0 border \n
-        border-primary mt-2"
+      border-primary mt-2"
         data-toggle="buttons"
         title="Select Theme">
         <label className="btn btn-dark active rounded-0">
@@ -18,7 +19,7 @@ function ThemeSwitch() {
             value="dark"
             onClick={toggleTheme}
           />
-            Dark
+          Dark
         </label>
         <label className="btn btn-light rounded-0">
           <input
@@ -28,11 +29,12 @@ function ThemeSwitch() {
             value="light"
             onClick={toggleTheme}
           />
-            Light
+          Light
         </label>
       </div>
     </form>
-  )
+
+  </div>)
 }
 
 export default ThemeSwitch

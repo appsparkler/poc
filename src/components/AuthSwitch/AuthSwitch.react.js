@@ -12,7 +12,7 @@ export default function() {
     onChange={handleFormChange
         .bind(null, toggleAuthenticated)}
   >
-    <h4>Is Authenticated?</h4>
+    <h4>Auth Switch:</h4>
     <div className="form-check">
       <label className="form-check-label">
         <input
