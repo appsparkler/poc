@@ -3,6 +3,7 @@ import Navbar from './components/Navbar/Navbar.react'
 import BookList from './components/BookList/BookList.react'
 import ThemeContextProvider from './context/ThemeContext.react'
 import AuthContextProvider from './context/AuthContext.react'
+import BookContextProvider from './context/BookContext.react'
 import SongList from './components/SongList/SongList.react'
 import ThemeSwitch from './components/ThemeSwitch/ThemeSwitch.react'
 import AuthSwitch from './components/AuthSwitch/AuthSwitch.react'
@@ -23,7 +24,9 @@ class App extends React.Component {
             </div>
             <ThemeSwitch />
             <Navbar />
-            <BookList />
+            <BookContextProvider>
+              <BookList />
+            </BookContextProvider>
             <SongList />
           </AuthContextProvider>
         </ThemeContextProvider>

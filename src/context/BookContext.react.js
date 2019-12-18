@@ -3,12 +3,12 @@ import uuid from 'uuid/v1'
 
 export const BookContext = createContext()
 
-function addBook(books, setBooks, newBook) {
-  setBooks({
-    ...books,
-    newBook,
-  })
-}
+// function addBook(books, setBooks, newBook) {
+//   setBooks({
+//     ...books,
+//     newBook,
+//   })
+// }
 
 export default function BookContextProvider({children}) {
   const INITIAL_BOOKS = [
@@ -26,11 +26,11 @@ export default function BookContextProvider({children}) {
       id: uuid(),
     },
   ]
-  const [books, setBooks] = useState(INITIAL_BOOKS)
-  return (<BookContext.Provider value={{
-    books,
-    addBook: addBook.bind(null, books, setBooks),
-  }}>
-    {children}
-  </BookContext.Provider>)
+  const [books] = useState(INITIAL_BOOKS)
+  return (
+    <BookContext.Provider value={{
+      books,
+    }}>
+      {children}
+    </BookContext.Provider>)
 }
