@@ -8,12 +8,16 @@ export default () =>{
   const {theme} = useContext(ThemeContext)
   const handleSubmit=(evt) => {
     evt.preventDefault()
-    const fd = new FormData(evt.target)
-    addBook({
-      title: fd.get('title'),
-      id: uuid(),
-    })
-    console.log(evt.target)
+    const form = evt.target
+    const fd = new FormData(form)
+    const title = fd.get('title').trim()
+    if (title) {
+      addBook({
+        title: fd.get('title'),
+        id: uuid(),
+      })
+    }
+    form.reset()
   }
   return (
     <form
