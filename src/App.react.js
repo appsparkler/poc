@@ -1,9 +1,12 @@
 import React from 'react'
 import Navbar from './components/Navbar/Navbar.react'
 import BookList from './components/BookList/BookList.react'
+import MovieForm from './components/MovieForm/MovieForm.react'
+import MovieList from './components/MovieList/MovieList.react'
 import ThemeContextProvider from './context/ThemeContext.react'
 import AuthContextProvider from './context/AuthContext.react'
 import BookContextProvider from './context/BookContext.react'
+import MovieContextProvider from './context/MovieContext.react'
 import SongList from './components/SongList/SongList.react'
 import ThemeSwitch from './components/ThemeSwitch/ThemeSwitch.react'
 import AuthSwitch from './components/AuthSwitch/AuthSwitch.react'
@@ -22,6 +25,12 @@ class App extends React.Component {
             <div className="mt-2">
               <AuthSwitch />
             </div>
+            <MovieContextProvider>
+              <div className="border border-success">
+                <MovieForm />
+                <MovieList />
+              </div>
+            </MovieContextProvider>
             <ThemeSwitch />
             <Navbar />
             <BookContextProvider>

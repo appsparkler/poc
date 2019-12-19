@@ -1,6 +1,6 @@
 import React, {useContext} from 'react'
-import {ThemeContext} from '../../context/ThemeContext/ThemeContext.react'
-import {MovieContext} from '../../context/MovieContext/MovieContext.react'
+import {ThemeContext} from '../../context/ThemeContext.react'
+import {MovieContext} from '../../context/MovieContext.react'
 
 export default function MovieList() {
   const {theme} = useContext(ThemeContext)
@@ -11,11 +11,11 @@ export default function MovieList() {
       <ul className={`list-group rounded-0 mt-2 border border-primary`}>
         {movies.map((movie) => (
           <li
-            key={movie.id}
+            key={movie.uuid}
             className={`list-group-item d-flex justify-content-between rounded-0
                       list-group-item-${theme}`
             }>
-            <span>{movie.title}</span>
+            <span>{movie.title} from the year {movie.year}</span>
           </li>
         ))}
       </ul>

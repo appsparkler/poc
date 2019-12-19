@@ -1,7 +1,7 @@
 import React, {createContext, useState} from 'react'
 import uuid from 'uuid/v1'
 
-const MovieContext = createContext()
+export const MovieContext = createContext()
 
 function addMovieBinded(movies, setMovies, newMovie) {
   newMovie = Object.assign(newMovie, {

@@ -8,6 +8,7 @@ export default function MovieForm() {
   })
   const {addMovie} = useContext(MovieContext)
   const handleSubmit = (evt) => {
+    console.log(newMovie)
     evt.preventDefault()
     addMovie(newMovie)
   }
@@ -20,9 +21,9 @@ export default function MovieForm() {
         className={`form-control rounded-0 border`}
         placeholder="Movie Title..."
         value={newMovie.title}
-        onChange={() => setNewMovie({
+        onChange={(evt) => setNewMovie({
           ...newMovie,
-          title: newMovie.title})}
+          title: evt.target.value})}
         name="title"
       / >
       <input
@@ -30,7 +31,9 @@ export default function MovieForm() {
         className={`form-control rounded-0 border`}
         placeholder="Release Year..."
         name="year"
-        onChange={() => setNewMovie({...newMovie, year: newMovie.year})}
+        onChange={(evt) => setNewMovie({
+          ...newMovie,
+          year: evt.target.value})}
         value={newMovie.year}
       / >
       <div className="input-group-append">
