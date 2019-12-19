@@ -4,10 +4,10 @@ import uuid from 'uuid/v1'
 export const BookContext = createContext()
 
 function addBookBinded(books, setBooks, newBook) {
-  setBooks({
+  setBooks([
     ...books,
     newBook,
-  })
+  ])
 }
 
 function removeBookBinded(books, setBooks, bookToRemove) {
