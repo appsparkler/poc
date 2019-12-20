@@ -21,10 +21,12 @@ class App extends React.Component {
       <div className="App container">
         <ThemeContextProvider>
           <AuthContextProvider>
+            <Navbar />
             <AuthAndThemeSwitch />
             <div className="mt-2">
               <AuthSwitch />
             </div>
+            <ThemeSwitch />
             <MovieContextProvider>
               <div className="border border-success p-2 mt-2">
                 <h4 className="text-success">Movie Stuff...</h4>
@@ -32,8 +34,6 @@ class App extends React.Component {
                 <MovieList />
               </div>
             </MovieContextProvider>
-            <ThemeSwitch />
-            <Navbar />
             <BookContextProvider>
               <BookList />
             </BookContextProvider>
