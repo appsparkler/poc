@@ -10,8 +10,10 @@ export default function MovieForm() {
   const {dispatch: movieDispatcher} = useContext(MovieContext)
   const handleSubmit = (evt) => {
     evt.preventDefault()
-    movieDispatcher({type: 'ADD_MOVIE', newMovie})
-    setNewMovie(INITIAL_STATE)
+    if (newMovie.title.trim() && newMovie.year.trim()) {
+      movieDispatcher({type: 'ADD_MOVIE', newMovie})
+      setNewMovie(INITIAL_STATE)
+    }
   }
   return (<form
     className="mt-2 rounded-0"
