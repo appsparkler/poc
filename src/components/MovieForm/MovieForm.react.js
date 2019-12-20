@@ -7,10 +7,10 @@ export default function MovieForm() {
     year: '',
   }
   const [newMovie, setNewMovie] = useState(INITIAL_STATE)
-  const {addMovie} = useContext(MovieContext)
+  const {dispatch: movieDispatcher} = useContext(MovieContext)
   const handleSubmit = (evt) => {
     evt.preventDefault()
-    addMovie(newMovie)
+    movieDispatcher({type: 'ADD_MOVIE', newMovie})
     setNewMovie(INITIAL_STATE)
   }
   return (<form
