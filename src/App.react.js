@@ -26,7 +26,8 @@ class App extends React.Component {
               <AuthSwitch />
             </div>
             <MovieContextProvider>
-              <div className="border border-success">
+              <div className="border border-success p-2 mt-2">
+                <h4 className="text-success">Movie Stuff...</h4>
                 <MovieForm />
                 <MovieList />
               </div>

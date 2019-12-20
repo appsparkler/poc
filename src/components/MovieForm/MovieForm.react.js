@@ -2,15 +2,16 @@ import React, {useContext, useState} from 'react'
 import {MovieContext} from '../../context/MovieContext.react'
 
 export default function MovieForm() {
-  const [newMovie, setNewMovie] = useState({
+  const INITIAL_STATE = {
     title: '',
     year: '',
-  })
+  }
+  const [newMovie, setNewMovie] = useState(INITIAL_STATE)
   const {addMovie} = useContext(MovieContext)
   const handleSubmit = (evt) => {
-    console.log(newMovie)
     evt.preventDefault()
     addMovie(newMovie)
+    setNewMovie(INITIAL_STATE)
   }
   return (<form
     className="mt-2 rounded-0"
@@ -41,7 +42,7 @@ export default function MovieForm() {
           className={`btn btn-outline-secondary rounded-0`}
           type="submit"
         >
-      Add Movie
+          Add Movie
         </button>
       </div>
     </div>
