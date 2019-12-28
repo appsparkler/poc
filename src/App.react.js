@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import {connect} from 'react-redux'
-// import {fetchAndStoreProjects} from './store/actions/project'
+import {fetchAndStoreProjects} from './store/actions/project'
 import Navbar from './components/layout/Navbar.react'
 import Dashboard from './components/dashboard/Dashboard.react'
 import ProjectDetails from './components/projects/ProjectDetails.react'
@@ -12,7 +12,7 @@ import CreateProject from './components/projects/CreateProject.react'
 class App extends Component {
   componentDidMount() {
     // hydrate store and listen for updates in 'projects' collection
-    // this.props.fetchAndStoreProjects()
+    this.props.fetchAndStoreProjects()
   }
   render() {
     return (
@@ -33,5 +33,5 @@ class App extends Component {
   }
 }
 export default connect(null, {
-  // fetchAndStoreProjects,
+  fetchAndStoreProjects,
 })(App)
