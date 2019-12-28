@@ -5,22 +5,34 @@ import {fetchAndStoreProjects} from '../../store/actions/project'
 import {Link} from 'react-router-dom'
 
 const ProjectList = () => {
-  const {projects} = useSelector((state) => state.project)
+  const {projects, fetchingProjects} = useSelector((state) => state.project)
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(fetchAndStoreProjects())
   }, [dispatch])
   return (
-    <div className="project-list section">
+    <div className="project-list section" style={{
+      maxHeight: '500px',
+      padding: '0 20px',
+      overflow: 'auto',
+    }}>
       {
-        projects && projects.map((project, i) => (
-          <Link
-            to={`/project/${project.id}`}
-            key={`project-summary-${project.id}`}
-          >
-            <ProjectSummary project={project} />
-          </Link>
-        ))
+        fetchingProjects ? (
+            <div className="progress">
+              <div className="indeterminate"></div>
+            </div>
+        ): (
+          projects && projects.map((project, i) => (
+            <Link
+              to={`/project/${project.id}`}
+              key={`project-summary-${project.id}`}
+            >
+              <div>
+                <ProjectSummary project={project} />
+              </div>
+            </Link>
+          ))
+        )
       }
     </div>
   )
