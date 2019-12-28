@@ -17,10 +17,10 @@ const projectReducer = (state = initState, action) => {
         fetchingProjects: true,
       }
 
-    case 'STORE_PROJECT':
+    case 'STORE_PROJECTS':
       return {
         ...state,
-        projects: [...state.projects, action.project],
+        projects: action.projects,
       }
 
     case 'FETCH_PROJECTS_DONE':

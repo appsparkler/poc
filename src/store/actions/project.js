@@ -10,16 +10,15 @@ export const createProject = (project) => (async (dispatch)=>{
 
 export const fetchAndStoreProjects = () => (async (dispatch)=> {
   dispatch({type: 'FETCH_PROJECTS_STARTED'})
-  const docs = await db.collection('projects').get()
-  // docs.forEach(console.log)
-  const project = (doc) => ({
-    ...doc.data(),
+  const projectCollection = await db.collection('projects').get()
+  const projects = projectCollection.docs.map((doc) => ({
     id: doc.id,
-  })
-  docs.forEach((doc) => dispatch({
-    type: 'STORE_PROJECT',
-    project: project(doc),
+    ...doc.data(),
   }))
+  dispatch({
+    type: 'STORE_PROJECTS',
+    projects,
+  })
   dispatch({type: 'FETCH_PROJECTS_DONE'})
 })
 
@@ -29,7 +28,6 @@ export const fetchProject = (projectId) => (async (dispatch) => {
   const docRef = db.collection('projects').doc(projectId)
   const doc = await docRef.get()
   if (doc.exists) {
-    console.log(doc.data())
     dispatch({type: 'STORE_FETCHED_PROJECT', project: doc.data()})
   } else {
     console.log('no such doc...')
