@@ -10,10 +10,13 @@ export class Dashboard extends Component {
         <div className="row">
           <div className="col s12 m6">
             {this.props.project.fetchingProjects ?
-              <h4 className="center blue-text text-darken-2">
-                Loading Projects...
-              </h4>:
-              <ProjectList projects={this.props.project.projects} />
+              (
+                <h4 className="center blue-text text-darken-2">
+                    Loading Projects...
+                </h4>
+              ):(
+                <ProjectList projects={this.props.project.projects} />
+              )
             }
           </div>
           <div className="col s12 m5 offset-m1">

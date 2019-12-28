@@ -1,9 +1,12 @@
 const initState = {
   projects: [],
   fetchingProjects: false,
+  fetchingProject: false,
+  fetchedProject: {},
 }
 
 const projectReducer = (state = initState, action) => {
+  console.log(action)
   const newState = {
     ...state,
   }
@@ -43,6 +46,22 @@ const projectReducer = (state = initState, action) => {
     case 'CREATE_PROJECT_ERROR':
       console.log(action)
       break
+
+    case 'FETCH_PROJECT_STARTED':
+      return {
+        ...state,
+        fetchingProject: true,
+      }
+    case 'FETCH_PROJECT_ENDED':
+      return {
+        ...state,
+        fetchingProject: false,
+      }
+    case 'STORE_FETCHED_PROJECT':
+      return {
+        ...state,
+        fetchedProject: action.project,
+      }
 
     default:
       break
