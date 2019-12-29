@@ -2,6 +2,8 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import Dashboard from '../Dashboard.react'
 import configureMockStore from 'redux-mock-store'
+import {Provider} from 'react-redux'
+// import {BrowserRouter} from 'react-router-dom'
 
 it('should render as expected', () => {
   const mockStore = configureMockStore()
@@ -16,7 +18,9 @@ it('should render as expected', () => {
     },
   })
   const component = renderer.create(
-      <Dashboard store={store}/>
+      <Provider store={store}>
+        <Dashboard />
+      </Provider>
   )
   const tree = component.toJSON()
   expect.assertions(1)
