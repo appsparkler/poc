@@ -5,32 +5,34 @@ exports[`should render correctly 1`] = `
   className="project-details section container"
 >
   <div
-    className="card z-depth-0"
+    className="card z-depth-1"
   >
-    <div
-      className="card-content"
-    >
-      <span
-        className="card-title"
+    <div>
+      <div
+        className="card-content"
       >
-        Project 
-        3
-         Title
-      </span>
-      <p>
-        Tiramisu topping gummi bears gummi bears dragée. Sesame snaps soufflé jelly-o. Macaroon liquorice chocolate bar topping wafer jujubes toffee. Ice cream croissant cupcake pie halvah. Croissant pastry apple pie.
-      </p>
-    </div>
-    <div
-      className="card-action grey lighten-4 grey-text"
-    >
-      <div>
-        Posted By The Net Ninja
+        <h3
+          className="card-title"
+        >
+          Title 1
+        </h3>
+        <p
+          className="card-body"
+        >
+          Content for project 1
+        </p>
       </div>
-      <div>
-        2nd September, 2am
+      <div
+        className="card-action grey lighten-4 grey-text"
+      >
+        <div>
+          Posted By The Net Ninja
+        </div>
+        <div>
+          2nd September, 2am
+        </div>
       </div>
     </div>
   </div>
 </div>
-`;
+`

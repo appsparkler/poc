@@ -81,30 +81,42 @@ exports[`should render the expected HTML 1`] = `
       >
         <div
           className="project-list section"
+<<<<<<< HEAD
+=======
+          style={
+            Object {
+              "maxHeight": "500px",
+              "overflow": "auto",
+              "padding": "0 20px",
+            }
+          }
+>>>>>>> @{-1}
         >
           <a
             href="/project/1"
             onClick={[Function]}
           >
-            <div
-              className="project-summary card"
-            >
+            <div>
               <div
-                className="card-content grey-text text-darken-3"
+                className="project-summary card"
               >
-                <span
-                  className="card-title"
+                <div
+                  className="card-content grey-text text-darken-3"
                 >
-                  Title 1
-                </span>
-                <p>
-                  Posted By Net Ninja
-                </p>
-                <p
-                  className="grey-text"
-                >
-                  3rd September, 2am
-                </p>
+                  <span
+                    className="card-title"
+                  >
+                    Title 1
+                  </span>
+                  <p>
+                    Posted By Net Ninja
+                  </p>
+                  <p
+                    className="grey-text"
+                  >
+                    3rd September, 2am
+                  </p>
+                </div>
               </div>
             </div>
           </a>
@@ -122,4 +134,4 @@ exports[`should render the expected HTML 1`] = `
     </div>
   </div>
 </div>
-`;
+`
