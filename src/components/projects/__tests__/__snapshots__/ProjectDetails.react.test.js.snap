@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly 1`] = `
+<div
+  className="project-details section container"
+>
+  <div
+    className="card z-depth-1"
+  >
+    <div>
+      <div
+        className="card-content"
+      >
+        <h3
+          className="card-title"
+        >
+          Title 1
+        </h3>
+        <p
+          className="card-body"
+        >
+          Content for project 1
+        </p>
+      </div>
+      <div
+        className="card-action grey lighten-4 grey-text"
+      >
+        <div>
+          Posted By The Net Ninja
+        </div>
+        <div>
+          2nd September, 2am
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
