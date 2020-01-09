@@ -81,8 +81,6 @@ exports[`should render the expected HTML 1`] = `
       >
         <div
           className="project-list section"
-<<<<<<< HEAD
-=======
           style={
             Object {
               "maxHeight": "500px",
@@ -90,7 +88,6 @@ exports[`should render the expected HTML 1`] = `
               "padding": "0 20px",
             }
           }
->>>>>>> @{-1}
         >
           <a
             href="/project/1"
@@ -134,4 +131,4 @@ exports[`should render the expected HTML 1`] = `
     </div>
   </div>
 </div>
-`
+`;
