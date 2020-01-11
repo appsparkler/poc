@@ -2,13 +2,20 @@ import React, {useEffect} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import {fetchProject} from '../../store/actions/project'
 
+export const fetchProjectEffect = ({dispatch, props}) => {
+  dispatch(fetchProject(props.match.params.id))
+}
+
+export const projectSelector = (state) => state.project
+
 const ProjectDetails = (props) => {
   const dispatch = useDispatch()
   const {fetchingProject, fetchedProject} =
-  useSelector((state) => state.project)
-  useEffect(() => {
-    dispatch(fetchProject(props.match.params.id))
-  }, [dispatch, props.match.params.id])
+  useSelector(projectSelector)
+  useEffect(
+      fetchProjectEffect.bind(null, {dispatch, props}),
+      [dispatch, props.match.params.id]
+  )
   return (
     <>
       <div className="project-details section container">
