@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react'
-import {useDispatch, useSelector} from 'react-redux'
+import {useDispatch} from 'react-redux'
+import {useSelector} from './useSelector'
 import {fetchProject} from '../../store/actions/project'
 
 export const fetchProjectEffect = ({dispatch, props}) => {
@@ -10,8 +11,15 @@ export const projectSelector = (state) => state.project
 
 const ProjectDetails = (props) => {
   const dispatch = useDispatch()
+  // What are we doing here?
+  // Here, we retrieving two variable from the store and mapping
+  // it to two variables
   const {fetchingProject, fetchedProject} =
   useSelector(projectSelector)
+  // What are we trying to do here?
+  // basically, when component mounts, we want to dispatch an action
+  // This action will fetch a project (given a project id) and
+  // will store it on the redux store.
   useEffect(
       fetchProjectEffect.bind(null, {dispatch, props}),
       [dispatch, props.match.params.id]
