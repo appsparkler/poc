@@ -20,16 +20,10 @@ export const FetchedProjectCard = ({fetchingProject, fetchedProject}) => (
   <div>
     <div className="card-content">
       <h3 className="card-title">
-        {
-          !fetchingProject && fetchedProject ?
-          fetchedProject.title : ''
-        }
+        { fetchedProject.title }
       </h3>
       <p className="card-body">
-        {
-          !fetchingProject && fetchedProject ?
-          fetchedProject.content: ''
-        }
+        { fetchedProject.content }
       </p>
     </div>
     <div className="card-action grey lighten-4 grey-text">
@@ -48,19 +42,16 @@ const ProjectDetails = (props) => {
       [dispatch, props.match.params.id]
   )
   return (
-    <>
-      <div className="project-details section container">
-        <div className="card z-depth-1">
-          {
+    <div className="project-details section container">
+      <div className="card z-depth-1">
+        {
             fetchingProject ? <CardLoader /> :
               <FetchedProjectCard
-                fetchingProject={ fetchingProject }
                 fetchedProject={ fetchedProject }
               />
-          }
-        </div>
+        }
       </div>
-    </>
+    </div>
   )
 }
 
