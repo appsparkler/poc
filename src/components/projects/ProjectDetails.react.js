@@ -45,10 +45,11 @@ const ProjectDetails = (props) => {
     <div className="project-details section container">
       <div className="card z-depth-1">
         {
-            fetchingProject ? <CardLoader /> :
-              <FetchedProjectCard
-                fetchedProject={ fetchedProject }
-              />
+          fetchingProject ?
+          <CardLoader /> :
+          <FetchedProjectCard
+            fetchedProject={ fetchedProject }
+          />
         }
       </div>
     </div>
