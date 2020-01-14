@@ -12,7 +12,7 @@ exports[`should correctly render CardLoader 1`] = `
     />
   </div>
 </div>
-`
+`;
 
 exports[`should correctly render FetchProjectCard 1`] = `
 <div>
@@ -41,7 +41,7 @@ exports[`should correctly render FetchProjectCard 1`] = `
     </div>
   </div>
 </div>
-`
+`;
 
 exports[`should correctly render Project Details component 1`] = `
 <div
@@ -50,32 +50,17 @@ exports[`should correctly render Project Details component 1`] = `
   <div
     className="card z-depth-1"
   >
-    <div>
+    <div
+      className="card-content"
+    >
       <div
-        className="card-content"
+        className="progress"
       >
-        <h3
-          className="card-title"
-        >
-          Title 1
-        </h3>
-        <p
-          className="card-body"
-        >
-          Content for project 1
-        </p>
-      </div>
-      <div
-        className="card-action grey lighten-4 grey-text"
-      >
-        <div>
-          Posted By The Net Ninja
-        </div>
-        <div>
-          2nd September, 2am
-        </div>
+        <div
+          className="indeterminate"
+        />
       </div>
     </div>
   </div>
 </div>
-`
+`;
