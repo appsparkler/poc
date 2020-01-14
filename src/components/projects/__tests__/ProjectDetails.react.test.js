@@ -26,25 +26,6 @@ const store = mockStore({
   },
 })
 
-it('should render the loader when data is being fetched...', () => {
-  // store.dispatch({type: 'FETCH_PROJECT_STARTED'})
-  const props = {
-    match: {
-      params: {
-        id: 3,
-      },
-    },
-  }
-
-  const component = renderer.create(
-      <Provider store={store}>
-        <ProjectDetails {...props} />
-      </Provider>
-  )
-  const tree = component.toJSON()
-  // expect(tree).toMatchSnapshot()
-})
-
 
 it('fetch-project-effect', () => {
   const dispatch = jest.fn()
@@ -83,6 +64,25 @@ it('should correctly render FetchProjectCard', () => {
 it('should correctly render Project Details component', () => {
   // const mockStore = configureMockStore()
   // const store = mockStore()
+  const component = renderer.create(
+      <Provider store={store}>
+        <ProjectDetails {...props} />
+      </Provider>
+  )
+  const tree = component.toJSON()
+  expect(tree).toMatchSnapshot()
+})
+
+it('should render the loader when data is being fetched...', () => {
+  store.dispatch({type: 'FETCH_PROJECT_STARTED'})
+  const props = {
+    match: {
+      params: {
+        id: 3,
+      },
+    },
+  }
+
   const component = renderer.create(
       <Provider store={store}>
         <ProjectDetails {...props} />
