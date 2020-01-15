@@ -23,7 +23,6 @@ export const fetchAndStoreProjects = () => (async (dispatch)=> {
 })
 
 export const fetchProject = (projectId) => (async (dispatch) => {
-  console.log('fetching...')
   dispatch({type: 'FETCH_PROJECT_STARTED'})
   const docRef = db.collection('projects').doc(projectId)
   const doc = await docRef.get()

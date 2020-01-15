@@ -41,19 +41,29 @@ const ProjectDetails = (props) => {
       fetchProjectEffect.bind(null, {dispatch, props}),
       [dispatch, props.match.params.id]
   )
-  return (
-    <div className="project-details section container">
-      <div className="card z-depth-1">
-        {
-          fetchingProject ?
-          <CardLoader /> :
-          <FetchedProjectCard
-            fetchedProject={ fetchedProject }
-          />
-        }
-      </div>
-    </div>
-  )
+  return <GetComponentJSX
+    fetchingProject={ fetchingProject }
+    fetchedProject={fetchedProject} />
 }
+
+// const getJSX = (fetchingProject, fetchedProject) => {
+//   if (fetchingProject) return (<CardLoader />)
+//   else {
+//     return (<FetchedProjectCard
+//       fetchedProject={ fetchedProject }
+//     />)
+//   }
+// }
+
+export const GetComponentJSX = ({fetchingProject, fetchedProject}) => (
+  <div className="project-details section container">
+    <div className="card z-depth-1">
+      {fetchingProject && <CardLoader />}
+      {!fetchingProject && fetchedProject && <FetchedProjectCard
+        fetchedProject={ fetchedProject }
+      />}
+    </div>
+  </div>
+)
 
 export default ProjectDetails
