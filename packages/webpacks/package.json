@@ -1,0 +1,32 @@
+{
+  "name": "@pkgr/webpacks",
+  "version": "0.0.1",
+  "description": "A helper package for Webpack configurations",
+  "keywords": [
+    "webpack",
+    "node",
+    "esm",
+    "modules"
+  ],
+  "author": "Akash <subs@appsparkler.com>",
+  "homepage": "https://www.appsparkler.com",
+  "license": "ISC",
+  "main": "lib/webpacks.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/appsparkler/pkgr.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/appsparkler/pkgr/issues"
+  }
+}
