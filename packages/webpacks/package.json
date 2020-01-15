@@ -29,7 +29,7 @@
   "bugs": {
     "url": "https://github.com/appsparkler/pkgr/issues"
   },
-  "gitHead": "cce5aa2999d911f8fcbe2507af0c61c6dee445bb",
+  "gitHead": "707c7f4e9b3a29fe31f9662b000469df5d7fe4ca",
   "dependencies": {
     "webpack": "^4.41.5",
     "webpack-dev-server": "^3.10.1"
