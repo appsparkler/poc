@@ -1,9 +1,16 @@
 import React from 'react'
 import {Provider} from 'react-redux'
 import {BrowserRouter} from 'react-router-dom'
-import ProjectList from '../ProjectList.react'
+import ProjectList, {useEffectForFetchingAndStoringProjects}
+  from '../ProjectList.react'
 import renderer from 'react-test-renderer'
 import configureStore from 'redux-mock-store'
+
+it('should correctly call dispatch', () => {
+  const dispatch = jest.fn()
+  useEffectForFetchingAndStoringProjects(dispatch)
+  expect(dispatch).toHaveBeenCalled()
+})
 
 it('should render correctly', () => {
   expect.assertions(1)

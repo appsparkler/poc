@@ -46,15 +46,6 @@ const ProjectDetails = (props) => {
     fetchedProject={fetchedProject} />
 }
 
-// const getJSX = (fetchingProject, fetchedProject) => {
-//   if (fetchingProject) return (<CardLoader />)
-//   else {
-//     return (<FetchedProjectCard
-//       fetchedProject={ fetchedProject }
-//     />)
-//   }
-// }
-
 export const GetComponentJSX = ({fetchingProject, fetchedProject}) => (
   <div className="project-details section container">
     <div className="card z-depth-1">

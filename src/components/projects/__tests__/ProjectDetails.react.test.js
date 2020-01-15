@@ -10,7 +10,6 @@ import renderer from 'react-test-renderer'
 import thunk from 'redux-thunk'
 import Adapter from 'enzyme-adapter-react-16'
 import {configure, shallow} from 'enzyme'
-
 configure({adapter: new Adapter()})
 const mockStore = configureMockStore([thunk])
 const props = {
@@ -32,7 +31,7 @@ const store = mockStore({
 })
 
 
-xit('fetch-project-effect', () => {
+it('fetch-project-effect', () => {
   const dispatch = jest.fn()
   const props = {
     match: {
@@ -45,13 +44,13 @@ xit('fetch-project-effect', () => {
   expect(dispatch).toHaveBeenCalled()
 })
 
-xit('should correctly render CardLoader', () => {
+it('should correctly render CardLoader', () => {
   const component = renderer.create(<CardLoader />)
   const tree = component.toJSON()
   expect(tree).toMatchSnapshot()
 })
 
-xit('should correctly render FetchProjectCard', () => {
+it('should correctly render FetchProjectCard', () => {
   const fetchedProject = {
     id: 1,
     title: 'Title 1',
@@ -66,9 +65,7 @@ xit('should correctly render FetchProjectCard', () => {
   expect(tree).toMatchSnapshot()
 })
 
-xit('should correctly render Project Details component', () => {
-  // const mockStore = configureMockStore()
-  // const store = mockStore()
+it('should correctly render Project Details component', () => {
   const component = renderer.create(
       <Provider store={store}>
         <ProjectDetails {...props} />
@@ -78,7 +75,7 @@ xit('should correctly render Project Details component', () => {
   expect(tree).toMatchSnapshot()
 })
 
-xit('should render the loader when data is being fetched...', () => {
+it('should render the loader when data is being fetched...', () => {
   store.dispatch({type: 'FETCH_PROJECT_STARTED'})
   const props = {
     match: {
@@ -109,10 +106,4 @@ it('getComponentJSX should conditionally render', () => {
     },
   })
   expect(wrapper.html()).toMatchSnapshot()
-
-  // wrapper.setProps({
-  //   fetchingProject: false,
-  //   fetchedProject:
-  // })
-  // expect(wrapper.html()).toMatchSnapshot()
 })

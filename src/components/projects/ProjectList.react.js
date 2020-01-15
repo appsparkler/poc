@@ -4,12 +4,15 @@ import ProjectSummary from './ProjectSummary.react'
 import {fetchAndStoreProjects} from '../../store/actions/project'
 import {Link} from 'react-router-dom'
 
+export function useEffectForFetchingAndStoringProjects(dispatch) {
+  dispatch(fetchAndStoreProjects())
+}
+
 const ProjectList = () => {
   const {projects, fetchingProjects} = useSelector((state) => state.project)
   const dispatch = useDispatch()
-  useEffect(() => {
-    dispatch(fetchAndStoreProjects())
-  }, [dispatch])
+  useEffect(useEffectForFetchingAndStoringProjects.bind(null, dispatch),
+      [dispatch])
   return (
     <div className="project-list section" style={{
       maxHeight: '500px',
