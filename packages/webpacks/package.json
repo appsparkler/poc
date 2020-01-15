@@ -1,6 +1,6 @@
 {
   "name": "@appsparkler/webpacks",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A helper package for Webpack configurations",
   "keywords": [
     "webpack",
