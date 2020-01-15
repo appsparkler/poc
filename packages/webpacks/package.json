@@ -1,5 +1,5 @@
 {
-  "name": "@pkgr/webpacks",
+  "name": "@appsparkler/webpacks",
   "version": "0.0.2",
   "description": "A helper package for Webpack configurations",
   "keywords": [
@@ -28,5 +28,6 @@
   },
   "bugs": {
     "url": "https://github.com/appsparkler/pkgr/issues"
-  }
+  },
+  "gitHead": "16fcf4b845e34654568c98656b58a5678906e02c"
 }
