@@ -1,11 +1,20 @@
 import * as projectActions from '../project'
 
 jest.mock('../../../firebase-app', ()=> {
-  const db = (require('../../../firebase-app/__mocks__')).db
-  db.collection('projects').add({
-    title: 'Project 1',
-    body: 'This is Project 1',
-  })
+  const firebasemock = require('firebase-mock')
+  class FirebaseApp {
+    constructor() {
+      this.db = new firebasemock.MockFirestore()
+    }
+  }
+  const {db} = new FirebaseApp()
+  db.collection('projects')
+      .doc('1')
+      .set({
+        id: 1,
+        title: 'Project 1',
+        body: 'This is Project 1',
+      })
   db.autoFlush(1000)
   return {db}
 })
@@ -43,5 +52,29 @@ describe('fetchAndStoreProject Function', () => {
     const dispatcher = fetchAndStoreProjects()
     await dispatcher(dispatch)
     expect(dispatch).toHaveBeenCalledTimes(3)
+  })
+})
+
+describe('fetchProject Function', () => {
+  it('should return a function', () => {
+    expect.assertions(1)
+    const {fetchProject} = projectActions
+    expect(typeof fetchProject(1)).toBe('function')
+  })
+  it('should execute the `dispatch` 3 times for available doc', async ()=> {
+    expect.assertions(1)
+    const {fetchProject} = projectActions
+    const dispatch = jest.fn()
+    const dispatcher = fetchProject(1)
+    await dispatcher(dispatch)
+    expect(dispatch).toHaveBeenCalledTimes(3)
+  })
+  it('should execute the `dispatch` 2 times for un-available doc', async ()=> {
+    expect.assertions(1)
+    const {fetchProject} = projectActions
+    const dispatch = jest.fn()
+    const dispatcher = fetchProject(2)
+    await dispatcher(dispatch)
+    expect(dispatch).toHaveBeenCalledTimes(2)
   })
 })

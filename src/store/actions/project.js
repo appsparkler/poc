@@ -26,10 +26,7 @@ export const fetchProject = (projectId) => (async (dispatch) => {
   dispatch({type: 'FETCH_PROJECT_STARTED'})
   const docRef = db.collection('projects').doc(projectId)
   const doc = await docRef.get()
-  if (doc.exists) {
-    dispatch({type: 'STORE_FETCHED_PROJECT', project: doc.data()})
-  } else {
-    console.log('no such doc...')
-  }
+  if (doc.exists) dispatch({type: 'STORE_FETCHED_PROJECT', project: doc.data()})
+  else console.log('no such doc...')
   dispatch({type: 'FETCH_PROJECT_ENDED'})
 })
