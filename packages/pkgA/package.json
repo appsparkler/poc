@@ -1,0 +1,16 @@
+{
+  "name": "@pkgr/pkgA",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "express": "^4.17.1",
+    "lodash": "^4.17.15"
+  },
+  "workspaces": {
+    "nohoist": [
+      "express"
+    ]
+  }
+}

@@ -1,10 +1,14 @@
 {
   "name": "root",
   "private": true,
-  "workspaces": [
-    "packages/**"
-  ],
+  "workspaces": {
+    "packages": [
+      "packages/**"
+    ],
+    "nohoist": [
+      "**/pkgA/**"
+    ]
+  },
   "devDependencies": {
-    "lerna": "^3.20.2"
   }
 }
