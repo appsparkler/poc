@@ -22,12 +22,12 @@ module.exports = {
   },
   resolve: {
     alias: {
-      '@appsparkler/react-hfn-components': resolve('src'),
+      '@appsparkler/marioplan': resolve('src'),
     },
     extensions: ['.sass', '.js', '.jsx', '.json'],
     modules: [
       resolve('node_modules'),
-      resolve('./'),
+      resolve('src'),
     ],
   },
   plugins: [
